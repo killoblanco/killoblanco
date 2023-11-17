@@ -20,6 +20,9 @@ dependencies:
   astro:
     specifier: 3.5.5
     version: 3.5.5(typescript@5.2.2)
+  luxon:
+    specifier: 3.4.4
+    version: 3.4.4
   tailwindcss:
     specifier: 3.3.5
     version: 3.3.5
@@ -31,6 +34,9 @@ dependencies:
     version: 4.4.6(react@18.2.0)
 
 devDependencies:
+  '@types/luxon':
+    specifier: 3.3.4
+    version: 3.3.4
   daisyui:
     specifier: 4.3.1
     version: 4.3.1(postcss@8.4.31)
@@ -1273,6 +1279,10 @@ packages:
     dependencies:
       '@types/unist': 3.0.2
     dev: false
+
+  /@types/luxon@3.3.4:
+    resolution: {integrity: sha512-H9OXxv4EzJwE75aTPKpiGXJq+y4LFxjpsdgKwSmr503P5DkWc3AG7VAFYrFNVvqemT5DfgZJV9itYhqBHSGujA==}
+    dev: true
 
   /@types/mdast@3.0.15:
     resolution: {integrity: sha512-LnwD+mUEfxWMa1QpDraczIn6k0Ee3SMicuYSSzS6ZYl2gKS09EClnJYGd8Du6rfc5r/GZEk5o1mRb8TaTj03sQ==}
@@ -2812,6 +2822,11 @@ packages:
     engines: {node: '>=10'}
     dependencies:
       yallist: 4.0.0
+    dev: false
+
+  /luxon@3.4.4:
+    resolution: {integrity: sha512-zobTr7akeGHnv7eBOXcRgMeCP6+uyYsczwmeRCauvpvaAltgNyTbLH/+VaEAPUeWBT+1GuNmz4wC/6jtQzbbVA==}
+    engines: {node: '>=12'}
     dev: false
 
   /magic-string@0.25.9:
