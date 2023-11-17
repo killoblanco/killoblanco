@@ -1,54 +1,63 @@
-# Astro Starter Kit: Basics
+# ![wave] I'm Kamilo Vasquez
 
-```sh
-npm create astro@latest -- --template basics
+![Visitors] &nbsp;&nbsp;
+[![GitHub]](https://github.com/killoblanco?tab=followers) &nbsp;&nbsp;
+[![LinkedIn]](https://www.linkedin.com/in/killoblanco/) &nbsp;&nbsp;
+[![Website]](https://whois.kamilo.dev/)
+
+## 👨🏽‍💻 Web Developer
+
+```javascript
+const killoblanco = {
+    pronouns: ['He', 'Him'],
+    languages: ['es-co', 'en-us'],
+    askMeAbout: [
+        'Software development',
+        'Tech'
+    ],
+    techStack: [
+        "Astro",
+        "Cloudflare",
+        "Daisy UI",
+        "Django",
+        "Docker",
+        "Drizzle ORM",
+        "ESLint",
+        "Firebase",
+        "Flutter",
+        "Google Cloud",
+        "GraphQL",
+        "Material UI",
+        "Neon DB",
+        "NextJS",
+        "Node",
+        "Playwright",
+        "Python",
+        "React",
+        "Redux",
+        "Redux Saga",
+        "Tailwind",
+        "TypeScript",
+        "ViteJS",
+        "Vitest",
+    ],
+    currentlyWorkingAs: 'Front-End Developer'
+}
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+## About me
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+![Visitors] &nbsp;&nbsp;
+![GitHub] &nbsp;&nbsp;
+[![LinkedIn]](https://www.linkedin.com/in/killoblanco/) &nbsp;&nbsp;
+[![Website]](https://whois.kamilo.dev/)
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+Greetings! I am Kamilo Vasquez, a passionate software developer with over a decade of experience since 2010. My mission is to create innovative technology solutions that positively impact people's lives.
 
-## 🚀 Project Structure
+Throughout my career, I have collaborated with international teams on large projects, assuming key roles in web development. My versatility extends beyond web development, also encompassing mobile and desktop applications. My self-taught approach constantly drives me to explore new technologies and I am particularly excited about the world of Artificial Intelligence.
 
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+[visitors]: https://visitor-badge.laobi.icu/badge?page_id=killoblanco
+[github]: https://img.shields.io/github/followers/killoblanco?style=social
+[linkedin]: https://img.shields.io/badge/-Kamilo_Vasquez-blue?style=plastic&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/killoblanco/
+[website]: https://img.shields.io/badge/-Website-blue?style=plastic&logo=MicrosoftEdge&color=3277BC&link=https://whois.kamilo.dev/
+[wave]: src/components/assets/wave.svg
