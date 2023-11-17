@@ -52,6 +52,12 @@ export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
 		extend: {
+			screens: {
+				sm: '480px',
+				md: '768px',
+				lg: '960px',
+				xl: '1280px',
+			},
 			fontFamily: {
 				sans: ['Readex Pro Variable', 'sans-serif'],
 				serif: ['Readex Pro Variable', 'serif'],
