@@ -16,10 +16,18 @@
 
   const checkbox = document.getElementById("theme-mode") as HTMLInputElement;
 
+  checkbox.addEventListener("load", () => {
+    const { mode } = useThemeMode.getState();
+
+    checkbox.checked = mode === "dark";
+  });
+
   checkbox.addEventListener("change", () => {
-    useThemeMode.getState().toggle();
+    const { mode, toggle } = useThemeMode.getState();
+
+    toggle();
 
     const body = document.querySelector("body") as HTMLBodyElement;
-    body.dataset.theme = useThemeMode.getState().mode;
+    body.dataset.theme = mode === "dark" ? "light" : "dark";
   });
 </script>
