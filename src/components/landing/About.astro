@@ -4,10 +4,12 @@ const { t } = useTranslation(Astro.url);
 ---
 
 <section
-  class="flex flex-col md:flex-row justify-evenly items-end bg-accent text-accent-content py-20 px-8 rounded-xl border-4 border-base-300"
+  class="flex flex-col md:flex-row gap-8 justify-evenly items-end bg-accent text-accent-content py-20 px-8 rounded-xl border-4 border-base-300"
 >
-  <h2 class="text-7xl md:text-8xl font-bold">{t("landing.about.title")}</h2>
-  <div class="prose flex flex-col gap-4 w-[65ch]">
+  <h2 class="text-7xl md:text-8xl font-bold max-w-[8ch]">
+    {t("landing.about.title")}
+  </h2>
+  <div class="prose flex flex-col gap-4 max-w-[65ch]">
     {
       t("landing.about.content").map((text: string) => (
         <p class="text-lg md:text-xl font-normal">{text}</p>
