@@ -1,0 +1,91 @@
+---
+import { useTranslation } from "@/i18n";
+import { getDateDiff, parseDate } from "@/utils/dates";
+
+const { t, lang } = useTranslation(Astro.url);
+
+const TIMELINE = {
+  "2018-08-01_": `Globant_${t("landing.experience.front")}`,
+  "2022-07-01_": `The Walt Disney Company_${t("landing.experience.front")}`,
+  "2022-04-01_2022-06-30": `Empower_${t("landing.experience.front")}`,
+  "2019-08-01_2022-03-31": `Stanley Black & Decker_${t(
+    "landing.experience.front",
+  )}`,
+  "2019-02-01_2019-08-31": `Quantcast_${t("landing.experience.front")}`,
+  "2018-08-01_2019-01-31": `Banco Davivienda_${t("landing.experience.front")}`,
+  "2017-08-01_2018-07-31": `Soft Dev Team_${t("landing.experience.full")}`,
+  "2015-04-01_2017-05-31": `Optime Consulting_${t("landing.experience.back")}`,
+  "2012-12-01_2015-03-31": `Loma Management Ltd._${t(
+    "landing.experience.full",
+  )}`,
+  "2011-09-01_2012-11-30": `Freelance_${t("landing.experience.full")}`,
+} as const;
+---
+
+<section class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+  <h2 class="text-5xl md:text-7xl font-semibold">
+    {t("landing.experience.title")}
+  </h2>
+  <ul
+    class="timeline timeline-snap-icon timeline-vertical max-md:timeline-compact"
+  >
+    {
+      Object.entries(TIMELINE).map(([date, company], idx) => {
+        const [start, end] = date.split("_");
+        const [companyName, position] = company.split("_");
+        const exp = getDateDiff(start ?? "", end ?? "", lang);
+
+        return (
+          <li>
+            <div
+              class:list={[
+                "timeline-middle",
+                { "text-primary": idx < 2, "text-base-300": idx >= 2 },
+              ]}
+            >
+              <iconify-icon
+                icon="tabler:square-rounded-filled"
+                width="24"
+                height="24"
+              />
+            </div>
+            <div class="timeline-start mr-4 mb-8">
+              <p class="text-base md:text-lg">
+                {`${parseDate(start ?? "", lang)} - ${parseDate(
+                  end ?? "",
+                  lang,
+                )}`}
+              </p>
+              <p class="font-medium text-base text-right">
+                {`${
+                  exp.years > 0
+                    ? `${exp.years} ${
+                        exp.years > 1
+                          ? t("landing.experience.years")
+                          : t("landing.experience.year")
+                      }, `
+                    : ""
+                }${
+                  exp.months > 0
+                    ? `${exp.months} ${
+                        exp.months > 1
+                          ? t("landing.experience.months")
+                          : t("landing.experience.month")
+                      }`
+                    : ""
+                }`}
+              </p>
+            </div>
+            <div class="timeline-end ml-4 mb-8">
+              <p class="text-xl md:text-3xl">{companyName}</p>
+              <p class="font-normal text-base">{position}</p>
+            </div>
+            <hr
+              class:list={[{ "bg-primary": idx < 2, "bg-base-300": idx >= 2 }]}
+            />
+          </li>
+        );
+      })
+    }
+  </ul>
+</section>
