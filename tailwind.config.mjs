@@ -53,8 +53,8 @@ export default {
 	theme: {
 		extend: {
 			fontFamily: {
-				sans: ['Readex Variable', 'sans-serif'],
-				serif: ['Readex Variable', 'serif'],
+				sans: ['Readex Pro Variable', 'sans-serif'],
+				serif: ['Readex Pro Variable', 'serif'],
 			},
 		},
 	},
