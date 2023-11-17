@@ -15,5 +15,15 @@ export const es = {
   skills: {
     title: 'Habilidades & Tecnologías',
     content: 'Constructor de infraestructura y aplicaciones full-stack multiplataforma con tecnologías de vanguardia.'
+  },
+  experience: {
+    title: 'Experiencia',
+    front: 'Desarrollador Frontend',
+    back: 'Desarrollador Backend',
+    full: 'Desarrollador Fullstack',
+    month: 'Mes',
+    months: 'Meses',
+    year: 'Año',
+    years: 'Años',
   }
 }
