@@ -1,7 +1,7 @@
 ---
 import Thumbnail from "@/components/assets/Thumbnail.astro";
 import SocialNetworks from "@/components/common/SocialNetworks.astro";
-import Wave from "@/components/assets/Wave.astro";
+import wave from "@/components/assets/wave.svg?raw";
 import { useTranslation } from "@/i18n";
 
 const { t } = useTranslation(Astro.url);
@@ -12,7 +12,7 @@ const { t } = useTranslation(Astro.url);
 >
   <div class="flex flex-col gap-4 w-fit">
     <h3 class="inline-flex text-5xl font-semibold gap-4">
-      <Wave />
+      <Fragment set:html={wave} />
       {t("landing.jumbo.line1")}
     </h3>
     <h1 class="text-7xl md:text-8xl font-bold">
