@@ -1,0 +1,25 @@
+<label class="swap swap-rotate">
+  <input type="checkbox" class="theme-controller" id="theme-mode" />
+  <iconify-icon
+    class="swap-on fill-current"
+    icon="tabler:sun"
+    width="28"
+    height="28"></iconify-icon>
+  <iconify-icon
+    class="swap-off fill-current"
+    icon="tabler:moon-stars"
+    width="28"
+    height="28"></iconify-icon>
+</label>
+<script>
+  import { useThemeMode } from "@/store/theme";
+
+  const checkbox = document.getElementById("theme-mode") as HTMLInputElement;
+
+  checkbox.addEventListener("change", () => {
+    useThemeMode.getState().toggle();
+
+    const body = document.querySelector("body") as HTMLBodyElement;
+    body.dataset.theme = useThemeMode.getState().mode;
+  });
+</script>
