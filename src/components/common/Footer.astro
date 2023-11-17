@@ -1,0 +1,21 @@
+---
+import { useTranslation } from "@/i18n";
+
+const { t } = useTranslation(Astro.url);
+console.log(t("common.footer"));
+---
+
+<footer
+  class="flex flex-row items-center justify-center py-10 bg-info text-info-content rounded-t-xl border-4 border-base-300 border-b-0"
+>
+  <p>
+    {t("common.footer")}&nbsp;
+    <a
+      class="decoration-dotted underline-offset-4 hover:decoration-dashed"
+      href="https://www.linkedin.com/in/killoblanco/"
+      target="_about"
+    >
+      Kamilo Vasquez
+    </a>
+  </p>
+</footer>
