@@ -1,0 +1,10 @@
+---
+import { useTranslation } from "@/i18n";
+const { t } = useTranslation(Astro.url);
+---
+
+<img
+  class="aspect-square w-full min-w-[256px] max-w-[512px] mask mask-hexagon-2"
+  src="https://avatars.githubusercontent.com/u/4205975"
+  alt={t("landing.jumbo.imgAlt") as unknown as string}
+/>
