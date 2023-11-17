@@ -51,7 +51,12 @@ const themes = [{
 export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
-		extend: {},
+		extend: {
+			fontFamily: {
+				sans: ['Readex Variable', 'sans-serif'],
+				serif: ['Readex Variable', 'serif'],
+			},
+		},
 	},
 	plugins: [daisyui],
 	daisyui: {
