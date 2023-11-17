@@ -1,0 +1,50 @@
+---
+import { useTranslation } from "@/i18n";
+const icons: Record<string, string> = {
+  Astro: "logos:astro-icon",
+  Cloudflare: "logos:cloudflare-icon",
+  Django: "logos:django-icon",
+  Docker: "logos:docker-icon",
+  ESLint: "logos:eslint",
+  Firebase: "logos:firebase",
+  Flutter: "logos:flutter",
+  Google_Cloud: "logos:google-cloud",
+  GraphQL: "logos:graphql",
+  Material_UI: "logos:material-ui",
+  Neon_DB: "logos:neon-icon",
+  NextJS: "logos:nextjs-icon",
+  Node: "logos:nodejs-icon",
+  Playwright: "logos:playwright",
+  Python: "logos:python",
+  React: "logos:react",
+  Redux: "logos:redux",
+  Redux_Saga: "logos:redux-saga",
+  Tailwind: "logos:tailwindcss-icon",
+  TypeScript: "logos:typescript-icon",
+  ViteJS: "logos:vitejs",
+  Vitest: "logos:vitest",
+} as const;
+
+const { t } = useTranslation(Astro.url);
+---
+
+<section class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+  <div
+    class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8 bg-secondary text-secondary-content py-12 px-8 rounded-xl border-4 border-base-300 shadow-[theme(spacing.2)_theme(spacing.2)_0_0_theme(colors.accent)]"
+  >
+    {
+      Object.entries(icons).map(([name, icon]) => (
+        <div class="flex flex-col items-center gap-4">
+          <iconify-icon icon={icon} width="48" height="48" />
+          <p class="text-center text-sm">{name.replaceAll("_", " ")}</p>
+        </div>
+      ))
+    }
+  </div>
+  <div class="flex flex-col gap-8">
+    <h2 class="text-4xl md:text-7xl font-semibold">
+      {t("landing.skills.title")}
+    </h2>
+    <p class="md:text-lg">{t("landing.skills.content")}</p>
+  </div>
+</section>
