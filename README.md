@@ -36,7 +36,7 @@ const killoblanco = {
         "React",
         "Redux",
         "Redux Saga",
-        "Tailwind",
+        "Tailwind CSS",
         "TypeScript",
         "ViteJS",
         "Vitest",
