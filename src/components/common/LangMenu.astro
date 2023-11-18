@@ -1,0 +1,27 @@
+---
+import { languages } from "@/i18n";
+
+const [, ...path] = Astro.url.pathname.split("/").filter(Boolean);
+---
+
+<div class="dropdown dropdown-end">
+  <label tabindex="0" class="btn btn-circle btn-ghost">
+    <iconify-icon
+      class="fill-current"
+      icon="tabler:language"
+      width="28"
+      height="28"></iconify-icon>
+  </label>
+  <ul
+    tabindex="0"
+    class="py-2 px-1 menu dropdown-content z-[1] bg-base-100 rounded-box"
+  >
+    {
+      Object.entries(languages).map(([key, value]) => (
+        <li>
+          <a href={`/${key}/${path.join("/")}`}>{value}</a>
+        </li>
+      ))
+    }
+  </ul>
+</div>
