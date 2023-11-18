@@ -8,6 +8,8 @@ interface Props {
 
 const { lang } = useTranslation(Astro.url);
 const { title } = Astro.props;
+
+const isProd = import.meta.env.PROD;
 ---
 
 <!doctype html>
@@ -22,6 +24,22 @@ const { title } = Astro.props;
       content="Software developer Kamilo Vasquez has over 10 years of experience creating solutions that positively impact people's lives. With expertise in web development, mobile apps, desktop apps, and WebAssembly, Kamilo is a self-taught learner with an interest in AI. Seeking job opportunities abroad that require relocation, Kamilo is a highly skilled and motivated professional looking to contribute to a company's success. Contact Kamilo to discuss how he can help your team achieve its goals."
     />
     <title>{title ? `${title} | ` : ""}Kamilo Vasquez</title>
+    {isProd && (
+      <!-- Google tag (gtag.js) -->
+      <script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-331340KY53"
+        data-cookie-consent="functionality"></script>
+      <script is:inline>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+          dataLayer.push(arguments);
+        }
+        gtag("js", new Date());
+  
+        gtag("config", "G-331340KY53");
+      </script>
+    )}
   </head>
   <body>
     <slot />
