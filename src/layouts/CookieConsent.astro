@@ -1,0 +1,247 @@
+---
+import { useTranslation } from '@/i18n';
+
+const isProd = import.meta.env.PROD;
+---
+<style is:global>
+  .termsfeed-com---nb {
+    background-color: theme(colors.secondary) !important;
+    border-radius:  0 theme(spacing.3) 0 0;
+    border: solid 4px theme('colors.base-300');
+    border-left: 0;
+    border-bottom: 0;
+    left: 0 !important;
+    right: auto !important;
+    font-family: theme(fontFamily.sans) !important;
+    box-shadow: theme(spacing.2) -.5rem 0 0 theme(colors.accent);
+    
+    & .cc-nb-main-container {
+      padding: theme(spacing.3) theme(spacing.5) !important;
+      
+      & .cc-nb-title,
+      & .cc-nb-text {
+        color: theme('colors.secondary-content') !important;
+        margin-bottom: theme(spacing.3);
+      }
+
+      & .cc-nb-title {
+        font-size: theme(fontSize.base);
+      }
+
+      & .cc-nb-text {
+        max-width: 65ch;
+        font-size: theme(fontSize.xs);
+      }
+
+      & .cc-nb-buttons-container {
+        display: inline-flex;
+        gap: theme(spacing.3) !important;
+
+        & .cc-nb-okagree,
+        & .cc-nb-changep {
+          font-weight: theme(fontWeight.medium) !important;
+          border-radius: theme(spacing.2) !important;  
+          font-size: theme(fontSize.xs);
+          padding: theme(spacing.2) theme(spacing.3) !important;
+          margin: 0 !important;
+          display: inline-flex !important;
+          align-items: center !important;
+          gap: theme(spacing.2) !important;
+        }
+        
+        & .cc-nb-okagree {
+          background-color: theme(colors.accent) !important;
+          color: theme(colors.accent-content) !important;
+
+          &:before {
+            content: url('https://api.iconify.design/fluent-emoji/check-mark-button.svg');
+            line-height: 0;
+            font-size: theme(fontSize.xs);
+          }
+        }
+        
+        & .cc-nb-changep {
+          background-color: theme(colors.neutral) !important;
+          color: theme(colors.neutral-content) !important;
+
+          &:after {
+            content: url('https://api.iconify.design/fluent-emoji/gear.svg');
+            line-height: 0;
+            font-size: theme(fontSize.xs);
+          }
+        }
+      }
+    }
+  }
+  
+  .termsfeed-com---pc-overlay.termsfeed-com---palette-light,
+  .termsfeed-com---pc-overlay.termsfeed-com---palette-dark {
+    backdrop-filter: blur(2px) !important;
+
+    & .cc-pc-container {
+      border-radius:  theme(spacing.3);
+      border: solid 4px theme('colors.base-300');
+      box-shadow: theme(spacing.2) theme(spacing.2) 0 0 theme(colors.accent);
+      font-family: theme(fontFamily.sans) !important;
+      color: theme('colors.secondary-content') !important;
+      overflow: hidden;
+      
+      & .cc-pc-head {
+        background-color: theme(colors.secondary) !important;        
+        border-bottom-width: 2px;
+        border-bottom-color: theme('colors.base-300');
+
+        & .cc-pc-head-title  * {
+          color: theme('colors.secondary-content') !important;
+        }
+        
+        & .cc-pc-head-lang {
+          align-items: center;
+          
+          & .cc-pc-head-close {
+            width: theme(spacing.10);
+            height: theme(spacing.10);
+            border-radius: 100%;
+            padding: theme(spacing.2);
+            color: theme('colors.secondary-content');
+            
+            &:focus, &:active {
+              border-color: theme(colors.neutral);
+            }
+          }
+
+          & .cc-pc-head-lang-select {
+            border: solid 2px theme('colors.base-300');
+            border-radius: theme(spacing.2);
+            padding: theme(spacing.1) theme(spacing.2);
+            font-size: theme(fontSize.sm);
+            background-color: theme(colors.accent);
+            color: theme('colors.accent-content') !important;
+          }
+        }
+      }
+
+      & .cc-cp-body {        
+        &-tabs {
+          background-color: theme('colors.neutral') !important;
+
+          &-item {
+            background-color: inherit !important;
+            border-color: theme('colors.base-300') !important;
+
+            &[active="true"] {
+              background-color: theme('colors.base-200') !important;
+            }
+
+            &-link {
+              color: theme('colors.base-content') !important;
+              font-family: theme(fontFamily.sans) !important;
+              font-weight: theme(fontWeight.medium) !important;
+
+              &:hover {
+                background-color: theme('colors.base-100') !important;
+              }
+            }
+          }
+        }
+
+        &-content {
+          background-color: theme('colors.base-200') !important;
+
+          & * {
+            color: theme('colors.base-content') !important;
+          }
+
+          & .cc-custom-checkbox label:before {
+            background-color: theme('colors.accent') !important;
+            border: solid 2px theme('colors.base-300');
+          }
+        }
+      }
+
+      & .cc-cp-foot {        
+        background-color: theme(colors.secondary) !important;
+
+        &-byline {
+          color: theme('colors.secondary-content') !important;
+
+          & a {
+            color: inherit !important;
+            opacity: .72;
+          }
+        }
+
+        &-save {
+          font-weight: theme(fontWeight.normal) !important;
+          border-radius: theme(spacing.2) !important;  
+          font-size: theme(fontSize.base);
+          padding: theme(spacing.2) theme(spacing.4) !important;
+          background-color: theme(colors.primary) !important;
+          color: theme(colors.primary-content) !important;
+          display: inline-flex !important;
+          align-items: center !important;
+          gap: theme(spacing.2) !important;
+
+          &:after {
+            content: url('https://api.iconify.design/fluent-emoji/floppy-disk.svg');
+            line-height: 0;
+            font-size: theme(fontSize.xs);
+          }
+        }
+      }
+    }
+  }
+</style>
+
+<>
+<!-- Cookie Consent by TermsFeed https://www.TermsFeed.com -->
+<script
+  type="text/javascript"
+  src="https://www.termsfeed.com/public/cookie-consent/4.1.0/cookie-consent.js"
+  charset="UTF-8"></script>
+<script define:vars={{ language: useTranslation(Astro.url).lang.split('-').at(0) }}>
+  document.addEventListener("DOMContentLoaded", function () {
+    globalThis.cookieconsent.run({
+      notice_banner_type: "simple",
+      consent_type: "express",
+      palette: "light",
+      language,
+      domain: 'kamilo.dev',
+      page_load_consent_levels: ["strictly-necessary"],
+      notice_banner_reject_button_hide: true,
+      preferences_center_close_button_hide: false,
+      page_refresh_confirmation_buttons: false,
+      website_name: "Kamilo Vasquez",
+    });
+  });
+</script>
+{
+  isProd && (
+    <!-- Google Analytics -->
+    <script
+    type="text/plain"
+    data-cookie-consent="strictly-necessary"
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-331340KY53"></script>
+    <script type="text/plain" data-cookie-consent="strictly-necessary" is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      
+      gtag("config", "G-331340KY53");
+    </script>
+    <!-- end of Google Analytics-->
+  )
+}
+<noscript>
+  Free cookie consent management tool by
+  <a href="https://www.termsfeed.com/">TermsFeed</a>
+</noscript>
+<!-- End Cookie Consent by TermsFeed https://www.TermsFeed.com -->
+
+<!-- Below is the link that users can use to open Preferences Center to change their preferences. Do not modify the ID parameter. Place it where appropriate, style it as needed. -->
+
+<!-- <a href="#" id="open_preferences_center">Update cookies preferences</a> -->
+</>
