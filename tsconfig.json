@@ -1,11 +1,13 @@
 {
   "extends": "astro/tsconfigs/strictest",
   "compilerOptions": {
-    "baseUrl": ".",
+    "baseUrl": "C:/Users/killo/OneDrive/Documents/projects/killoblanco",
     "paths": {
       "@/*": [
         "src/*"
       ]
-    }
+    },
+    "jsx": "react-jsx",
+    "jsxImportSource": "react"
   }
 }
