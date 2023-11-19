@@ -6,9 +6,9 @@ const { lang, t } = useTranslation(Astro.url);
 <section class="grid gap-16 grid-cols-6 auto-rows-auto">
   <a
     href={`/${lang}/ai`}
-    class="col-span-3 border-4 border-base-300 rounded-xl p-8 flex justify-between items-center bg-gradient-to-br from-secondary to-accent text-accent-content"
+    class="col-span-6 md:col-span-3 border-4 border-base-300 rounded-xl p-8 flex justify-between items-center bg-gradient-to-br from-secondary to-accent text-accent-content"
   >
-    <h4 class="text-4xl md:text-5xl font-bold max-w-[10ch]">
+    <h4 class="text-3xl md:text-5xl font-bold max-w-[10ch]">
       {t("landing.bento.ai")}
     </h4>
     <iconify-icon icon="fluent-emoji:magic-wand" width={4 * 22} height={4 * 22}
