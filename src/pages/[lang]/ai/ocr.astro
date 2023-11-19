@@ -1,0 +1,20 @@
+---
+import OCR from "@/ai/ocr";
+import Footer from "@/components/common/Footer.astro";
+import TopBar from "@/components/common/TopBar.astro";
+import Html from "@/layouts/Html.astro";
+---
+
+<Html>
+  <TopBar backBtn />
+  <OCR client:only>
+    <Footer />
+  </OCR>
+</Html>
+
+<script define:vars={{ path: Astro.url.pathname }}>
+  gtag("event", "page_view", {
+    page_title: "ai/ocr",
+    page_path: path,
+  });
+</script>
