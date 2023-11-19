@@ -1,7 +1,7 @@
 {
   "extends": "astro/tsconfigs/strictest",
   "compilerOptions": {
-    "baseUrl": "C:/Users/killo/OneDrive/Documents/projects/killoblanco",
+    "baseUrl": ".",
     "paths": {
       "@/*": [
         "src/*"
