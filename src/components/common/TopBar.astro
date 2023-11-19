@@ -1,10 +1,19 @@
 ---
+import BackBtn from "./BackBtn.astro";
 import LangMenu from "./LangMenu.astro";
 import ThemeController from "./ThemeController.astro";
+
+interface Props {
+  backBtn?: boolean;
+}
+
+const { backBtn } = Astro.props;
 ---
 
 <div class="navbar fixed px-6 z-50">
-  <div class="flex-1"></div>
+  <div class="flex-1 gap-2">
+    {backBtn === true ? <BackBtn /> : null}
+  </div>
   <div class="flex-none gap-2">
     <LangMenu />
     <ThemeController />
