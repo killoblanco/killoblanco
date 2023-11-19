@@ -5,6 +5,9 @@ export const es = {
     line3: 'Desarrollador Web',
     imgAlt: 'Soy Kamilo Vasquez'
   },
+  bento: {
+    ai: 'Experimentos de IA ✨',
+  },
   about: {
     title: 'Acerca de mí',
     content: [

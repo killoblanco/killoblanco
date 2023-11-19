@@ -5,6 +5,9 @@ export const en = {
     line3: 'Web Developer',
     imgAlt: "I'm Kamilo Vasquez"
   },
+  bento: {
+    ai: '✨ AI Experiments',
+  },
   about: {
     title: 'About Me',
     content: [
