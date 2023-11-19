@@ -1,5 +1,6 @@
 import * as landing from './landing'
 import * as common from './common'
+import * as ai from './ai'
 
 export const languages = {
   'es-CO': 'Español',
@@ -11,11 +12,13 @@ export const defaultLang = 'es-CO'
 const i18n = {
   'es-CO': {
     common: common.es,
-    landing: landing.es
+    landing: landing.es,
+    ai: ai.es
   },
   'en-US': {
     common: common.en,
-    landing: landing.en
+    landing: landing.en,
+    ai: ai.en
   }
 }
 
