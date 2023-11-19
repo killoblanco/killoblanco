@@ -1,0 +1,6 @@
+---
+import { useTranslation } from "@/i18n";
+const { lang } = useTranslation(Astro.url);
+---
+
+<meta http-equiv="refresh" content={`0;url=/${lang}/ai/ocr`} />
