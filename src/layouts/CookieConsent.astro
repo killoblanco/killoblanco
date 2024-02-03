@@ -4,7 +4,7 @@ import { useTranslation } from '@/i18n';
 const isProd = import.meta.env.PROD;
 ---
 <style is:global>
-  .termsfeed-com---nb {
+  /* .termsfeed-com---nb {
     background-color: theme(colors.secondary) !important;
     border-radius:  0 theme(spacing.3) 0 0;
     border: solid 4px theme('colors.base-300');
@@ -14,10 +14,10 @@ const isProd = import.meta.env.PROD;
     right: auto !important;
     font-family: theme(fontFamily.sans) !important;
     box-shadow: theme(spacing.2) -.5rem 0 0 theme(colors.accent);
-    
+
     & .cc-nb-main-container {
       padding: theme(spacing.3) theme(spacing.5) !important;
-      
+
       & .cc-nb-title,
       & .cc-nb-text {
         color: theme('colors.secondary-content') !important;
@@ -40,7 +40,7 @@ const isProd = import.meta.env.PROD;
         & .cc-nb-okagree,
         & .cc-nb-changep {
           font-weight: theme(fontWeight.medium) !important;
-          border-radius: theme(spacing.2) !important;  
+          border-radius: theme(spacing.2) !important;
           font-size: theme(fontSize.xs);
           padding: theme(spacing.2) theme(spacing.3) !important;
           margin: 0 !important;
@@ -48,7 +48,7 @@ const isProd = import.meta.env.PROD;
           align-items: center !important;
           gap: theme(spacing.2) !important;
         }
-        
+
         & .cc-nb-okagree {
           background-color: theme(colors.accent) !important;
           color: theme(colors.accent-content) !important;
@@ -59,7 +59,7 @@ const isProd = import.meta.env.PROD;
             font-size: theme(fontSize.xs);
           }
         }
-        
+
         & .cc-nb-changep {
           background-color: theme(colors.neutral) !important;
           color: theme(colors.neutral-content) !important;
@@ -73,7 +73,7 @@ const isProd = import.meta.env.PROD;
       }
     }
   }
-  
+
   .termsfeed-com---pc-overlay.termsfeed-com---palette-light,
   .termsfeed-com---pc-overlay.termsfeed-com---palette-dark {
     backdrop-filter: blur(2px) !important;
@@ -85,26 +85,26 @@ const isProd = import.meta.env.PROD;
       font-family: theme(fontFamily.sans) !important;
       color: theme('colors.secondary-content') !important;
       overflow: hidden;
-      
+
       & .cc-pc-head {
-        background-color: theme(colors.secondary) !important;        
+        background-color: theme(colors.secondary) !important;
         border-bottom-width: 2px;
         border-bottom-color: theme('colors.base-300');
 
         & .cc-pc-head-title  * {
           color: theme('colors.secondary-content') !important;
         }
-        
+
         & .cc-pc-head-lang {
           align-items: center;
-          
+
           & .cc-pc-head-close {
             width: theme(spacing.10);
             height: theme(spacing.10);
             border-radius: 100%;
             padding: theme(spacing.2);
             color: theme('colors.secondary-content');
-            
+
             &:focus, &:active {
               border-color: theme(colors.neutral);
             }
@@ -121,7 +121,7 @@ const isProd = import.meta.env.PROD;
         }
       }
 
-      & .cc-cp-body {        
+      & .cc-cp-body {
         &-tabs {
           background-color: theme('colors.neutral') !important;
 
@@ -159,7 +159,7 @@ const isProd = import.meta.env.PROD;
         }
       }
 
-      & .cc-cp-foot {        
+      & .cc-cp-foot {
         background-color: theme(colors.secondary) !important;
 
         &-byline {
@@ -173,7 +173,7 @@ const isProd = import.meta.env.PROD;
 
         &-save {
           font-weight: theme(fontWeight.normal) !important;
-          border-radius: theme(spacing.2) !important;  
+          border-radius: theme(spacing.2) !important;
           font-size: theme(fontSize.base);
           padding: theme(spacing.2) theme(spacing.4) !important;
           background-color: theme(colors.primary) !important;
@@ -190,7 +190,7 @@ const isProd = import.meta.env.PROD;
         }
       }
     }
-  }
+  } */
 </style>
 
 <>
@@ -217,7 +217,6 @@ const isProd = import.meta.env.PROD;
 </script>
 {
   isProd && (
-    <!-- Google Analytics -->
     <script
     type="text/plain"
     data-cookie-consent="strictly-necessary"
@@ -229,10 +228,9 @@ const isProd = import.meta.env.PROD;
         dataLayer.push(arguments);
       }
       gtag("js", new Date());
-      
+
       gtag("config", "G-331340KY53");
     </script>
-    <!-- end of Google Analytics-->
   )
 }
 <noscript>
