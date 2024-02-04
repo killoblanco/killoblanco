@@ -1,5 +1,6 @@
 import typography from '@tailwindcss/typography'
 import chroma from 'chroma-js'
+import {addDynamicIconSelectors} from '@iconify/tailwind'
 
 const colors = [
   ['neutral', '#383a36'],
@@ -40,5 +41,6 @@ export default {
   },
   plugins: [
     typography({ className: 'typo' }),
+    addDynamicIconSelectors(),
   ],
 }
