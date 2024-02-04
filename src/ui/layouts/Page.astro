@@ -1,9 +1,13 @@
 ---
 import Html from "./Html.astro";
+import Navbar from "../components/Navbar.astro";
 ---
 
 <Html>
-    <div class="mx-auto w-full max-w-3xl">
-        <slot />
-    </div>
+  <div class="bg-[radial-gradient(circle_500px_at_50%_200px,theme(colors.brand.96),transparent)] dark:bg-[radial-gradient(circle_500px_at_50%_200px,theme(colors.brand.40),transparent)] min-h-[100dvh] bg-fixed">
+    <main class="mx-auto w-full max-w-3xl py-6 px-4 md:px-0 flex flex-col gap-24">
+      <Navbar />
+      <slot />
+    </main>
+  </div>
 </Html>
