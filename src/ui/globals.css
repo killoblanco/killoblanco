@@ -20,7 +20,7 @@
   }
 
   ::selection {
-    background-color: #1DE9B6;
-    color: #263238;
+    background-color:theme('colors.brand.40');
+    color: theme('colors.neutral.100');
   }
 }
