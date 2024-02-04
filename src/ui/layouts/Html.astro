@@ -15,10 +15,9 @@ title = `${title ? title + " | " : ""}Kamilo Vasquez`;
 <html lang="es-CO">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    /><meta name="generator" content={Astro.generator} />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
     <meta
       name="description"
       content="I'm Kamilo Vasquez, a passionate software developer with over a decade of experience since 2010. My mission is to create innovative technological solutions that positively impact people's lives. Throughout my career, I've collaborated with international teams on large-scale projects, taking on key roles in web development. My versatility extends beyond web development, also covering mobile and desktop applications. My self-taught approach constantly drives me to explore new technologies, and I'm particularly excited about the world of Artificial Intelligence."
@@ -33,7 +32,9 @@ title = `${title ? title + " | " : ""}Kamilo Vasquez`;
     />
     <title>{title}</title>
   </head>
-  <body class="bg-neutral-96 text-neutral-4 dark:bg-neutral-4 dark:text-neutral-96">
+  <body
+    class="bg-neutral-96 text-neutral-4 dark:bg-neutral-4 dark:text-neutral-96"
+  >
     <slot />
   </body>
 </html>
