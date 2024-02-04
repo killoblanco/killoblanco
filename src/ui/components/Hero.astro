@@ -1,0 +1,32 @@
+---
+import Wave from "@/ui/elements/Wave.astro";
+import Button from "@/ui/elements/Button.astro";
+---
+
+<section class="flex flex-col sm:flex-row items-center justify-between gap-8" id="hero">
+  <div class="flex flex-col gap-6 max-w-[65ch]">
+    <Wave />
+    <header class="flex items-start gap-6">
+      <h1 class="text-6xl font-semibold">Soy Kamilo Vasquez</h1>
+    </header>
+    <p class="text-xl font-light [&>strong]:text-brand-40 dark:[&>strong]:text-brand-80 [&>strong]:font-medium">
+      +12 años de experiencia. <strong>Ingeniero de software</strong> de Barranquilla, Colombia
+      🇨🇴. Especializado en desarrollo de paginas y aplicaciones web.
+    </p>
+    <div class="flex flex-row items-center justify-start gap-4">
+      <Button as="a" target="_social" rel="noopener noreferrer" href="//github.com/killoblanco">
+        <span class="icon-[tabler--brand-github] w-6 h-6"></span>
+        GitHub
+      </Button>
+      <Button as="a" target="_social" rel="noopener noreferrer" href="//linkedin.com/in/killoblanco">
+        <span class="icon-[tabler--brand-linkedin] w-6 h-6"></span>
+        LinkedIn
+      </Button>
+    </div>
+  </div>
+  <img
+    class="aspect-square w-full min-w-[128px] max-w-[256px] rounded-full"
+    src="https://avatars.githubusercontent.com/u/4205975"
+    alt="Thumbnail"
+  />
+</section>
