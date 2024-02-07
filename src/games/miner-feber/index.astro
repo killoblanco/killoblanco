@@ -1,0 +1,67 @@
+---
+import Html from "@/ui/layouts/Html.astro";
+---
+
+<Html title="Miner Feber">
+  <canvas width="768" height={(16*768)/9} class="mx-auto w-full max-w-screen-sm h-[100dvh]"></canvas>
+</Html>
+
+<script>
+  const canvas = document.querySelector('canvas') as HTMLCanvasElement;
+import { MdxIntegrationMissingError } from "node_modules/astro/dist/core/errors/errors-data";
+  const ctx = canvas.getContext('2d') as CanvasRenderingContext2D;
+
+  const stage = {
+    x: 0,
+    y: 0,
+    w: canvas.width,
+    h: canvas.height,
+    draw() {
+      ctx.fillStyle = 'lime';
+      ctx.fillRect(this.x, this.y, this.w, this.h);
+    },
+  }
+
+  const buildMiner = () => ({
+    x: canvas.width / 2 - 40,
+    y: canvas.height - ((8*8) + 80),
+    w: 80,
+    h: 80,
+    color: 'red',
+    draw() {
+      ctx.fillStyle = this.color;
+      ctx.fillRect(this.x, this.y, this.w, this.h);
+    },
+  });
+
+  const miner = buildMiner();
+
+  const frame = () => {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    stage.draw();
+    miner.draw();
+    requestAnimationFrame(frame);
+  }
+
+  requestAnimationFrame(frame);
+
+  const moveMinerLeftRight = (e: MouseEvent | TouchEvent) => {
+    const touch = e as TouchEvent;
+    const mouse = e as MouseEvent;
+    const x = mouse.movementX * 2.1618;
+    miner.x = miner.x + x;
+
+    if (touch.touches) {
+      const tch = touch.touches[0] as Touch;
+      miner.x = (tch.clientX * 2) - miner.w;
+    }
+
+    if (miner.x < 0) miner.x = 16;
+    if (miner.x > canvas.width - miner.w) miner.x = canvas.width - miner.w - 16;
+  }
+
+  canvas.addEventListener('mousemove', moveMinerLeftRight);
+  canvas.addEventListener('click', moveMinerLeftRight);
+  canvas.addEventListener('touchstart', moveMinerLeftRight);
+  canvas.addEventListener('touchmove', moveMinerLeftRight);
+</script>
