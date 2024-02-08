@@ -63,7 +63,7 @@ import Html from "@/ui/layouts/Html.astro";
   });
 
   const rock = () => {
-    const direction = Math.random() < 0.5 ? 'left' : 'right';
+    const direction = Math.random() < 0.5 ? "left" : "right";
     const speed = Math.random() * 2 + 1;
 
     return {
@@ -79,7 +79,7 @@ import Html from "@/ui/layouts/Html.astro";
         ctx.fill();
       },
       move() {
-        if (this.dir === 'left') {
+        if (this.dir === "left") {
           this.x -= speed;
         } else {
           this.x += speed;
@@ -87,12 +87,13 @@ import Html from "@/ui/layouts/Html.astro";
 
         this.y += speed;
 
-        if ((this.x - (this.r / 2)) < 0 || (this.x + (this.r / 2)) > canvas.width) {
-          this.dir = this.dir === 'left' ? 'right' : 'left';
+        if (this.x - this.r < 0 || this.x + this.r > canvas.width) {
+          this.dir = this.dir === "left" ? "right" : "left";
         }
 
-        if ((this.y - this.r) > canvas.height) {
-          rocks.splice(rocks.indexOf(this), 1);
+        if (this.y - this.r > canvas.height) {
+          this.y = 0; // Set rock position at top of canvas
+          this.dir = this.dir === "left" ? "right" : "left"; // Reverse direction
         }
 
         this.draw();
@@ -172,5 +173,8 @@ import Html from "@/ui/layouts/Html.astro";
     clearInterval(shotter);
   });
 
-  canvas.addEventListener('click', startGame);
+  canvas.addEventListener("contextmenu", (event) => {
+    event.preventDefault();
+    startGame();
+  });
 </script>
