@@ -1,0 +1,31 @@
+---
+import type { HTMLTag, Polymorphic } from "astro/types";
+
+interface BtnProps {
+  material?: "wood" | "stone" | "gummy"
+}
+
+type Props<Tag extends HTMLTag> = Polymorphic<
+  { as: Tag } & BtnProps
+>;
+
+const { as: Tag, material = 'wood', ...props } = Astro.props;
+---
+
+<Tag
+  class:list={[
+    "font-medium text-white text-xl",
+    "rounded px-6 py-1 pb-2 shadow-xl",
+    "hover:scale-[0.95] transition-transform duration-300 ease-in-out",
+    "bg-cover bg-center bg-no-repeat",
+    "inline-flex items-center gap-2",
+    {
+      "[background-image:url('/games/fluffy/btns/1.webp')]": material === "wood",
+      "[background-image:url('/games/fluffy/btns/2.webp')]": material === "stone",
+      "[background-image:url('/games/fluffy/btns/3.webp')]": material === "gummy",
+    }
+  ]}
+  {...props}
+>
+  <slot />
+</Tag>
