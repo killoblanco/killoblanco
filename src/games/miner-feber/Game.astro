@@ -1,0 +1,238 @@
+---
+import Html from "@/ui/layouts/Html.astro";
+---
+
+<Html title="Miner Feber">
+  <canvas
+    width="1080"
+    height="1920"
+    class="mx-auto w-full max-w-screen-sm h-[100dvh]"></canvas>
+</Html>
+
+<script>
+  // const canvas = document.querySelector("canvas") as HTMLCanvasElement;
+  // const ctx = canvas.getContext("2d") as CanvasRenderingContext2D;
+
+  // const state = {
+  //   bulletSpeed: 4 * 1,
+  //   shootCadence: 8 * 10,
+  //   level: 1,
+  //   spawnedRocks: 0,
+  //   maxRocks: 0
+  // };
+
+  // state.shootCadence = 2000 / state.level;
+  // state.maxRocks = Math.ceil(state.level * 1.618);
+
+  // const stage = {
+  //   x: 0,
+  //   y: 0,
+  //   w: canvas.width,
+  //   h: canvas.height,
+  //   draw() {
+  //     ctx.fillStyle = "lime";
+  //     ctx.fillRect(this.x, this.y, this.w, this.h);
+  //   },
+  // };
+
+  // const miner = {
+  //   x: canvas.width / 2 - 40,
+  //   y: canvas.height - (8 * 8 + 80),
+  //   w: 80,
+  //   h: 80,
+  //   color: "red",
+  //   draw() {
+  //     ctx.fillStyle = this.color;
+  //     ctx.fillRect(this.x, this.y, this.w, this.h);
+  //   },
+  // };
+
+  // const bullet = () => ({
+  //   x: miner.x + miner.w / 2,
+  //   y: miner.y + miner.h / 2,
+  //   w: 16,
+  //   h: 16,
+  //   power: 1,
+  //   color: "white",
+  //   draw() {
+  //     ctx.fillStyle = this.color;
+  //     ctx.fillRect(this.x, this.y, this.w, this.h);
+  //   },
+  //   move() {
+  //     this.y -= state.bulletSpeed;
+
+  //     if (this.y < -20) {
+  //       bullets.splice(bullets.indexOf(this), 1);
+  //     }
+
+  //     this.draw();
+  //   },
+  //   checkCollision() {
+  //     for (const rock of rocks) {
+  //       if (
+  //         this.x < rock.x + rock.r * 2 &&
+  //         this.x + this.w > rock.x &&
+  //         this.y < rock.y + rock.r * 2 &&
+  //         this.y + this.h > rock.y
+  //       ) {
+  //         bullets.splice(bullets.indexOf(this), 1);
+  //         let nextHP = (rock.hp -= this.power);
+
+  //         if (nextHP < 1) {
+  //           rocks.splice(rocks.indexOf(rock), 1);
+  //         }
+
+  //         if (state.spawnedRocks === state.maxRocks && rocks.length === 0) {
+  //           state.level++;
+  //           state.spawnedRocks = 0;
+  //           state.maxRocks = Math.ceil(state.level * 1.618);
+  //           state.shootCadence = 2000 / state.level;
+  //           clearInterval(rockSpawner);
+  //           rockSpawner = setInterval(spawnRock, 5000 / state.level);
+  //           console.log("Level up!", state.level);
+  //         }
+  //       }
+  //     }
+  //   },
+  // });
+
+  // const rock = () => {
+  //   const direction = Math.random() < 0.5 ? "left" : "right";
+  //   const speed = 1;
+
+  //   return {
+  //     x: Math.random() * (canvas.width - 2 * 180) + 180,
+  //     y: 0,
+  //     r: Math.floor(Math.random() * (180 - 40 + 1) + 40),
+  //     dir: direction,
+  //     color: "gray",
+  //     hp: Math.floor(Math.random() * (state.level * 10 - 1 + 1) + 1),
+  //     draw() {
+  //       ctx.fillStyle = this.color;
+  //       ctx.beginPath();
+  //       ctx.arc(this.x, this.y, this.r, 0, 2 * Math.PI, false);
+  //       ctx.fill();
+
+  //       ctx.fillStyle = "white";
+  //       ctx.font = "bold 24px Arial";
+  //       ctx.textAlign = "center";
+  //       ctx.fillText(this.hp.toString(), this.x, this.y);
+  //     },
+  //     move() {
+  //       if (this.dir === "left") {
+  //         this.x -= speed;
+  //       } else {
+  //         this.x += speed;
+  //       }
+
+  //       this.y += speed;
+
+  //       if (this.x - this.r < 0 || this.x + this.r > canvas.width) {
+  //         this.dir = this.dir === "left" ? "right" : "left";
+  //       }
+
+  //       if (this.y - this.r > canvas.height) {
+  //         this.y = 0; // Set rock position at top of canvas
+  //         this.dir = this.dir === "left" ? "right" : "left"; // Reverse direction
+  //       }
+
+  //       this.draw();
+  //     },
+  //     checkCollision() {
+  //       for (const bullet of bullets) {
+  //         if (
+  //           bullet.x < this.x + this.r * 2 &&
+  //           bullet.x + bullet.w > this.x &&
+  //           bullet.y < this.y + this.r * 2 &&
+  //           bullet.y + bullet.h > this.y
+  //         ) {
+  //           bullets.splice(bullets.indexOf(bullet), 1);
+  //           this.hp = Math.max(0, this.hp - bullet.power);
+  //         }
+  //       }
+  //     },
+  //   };
+  // };
+
+  // const bullets: ReturnType<typeof bullet>[] = [];
+  // const rocks: ReturnType<typeof rock>[] = [];
+
+  // const frame = () => {
+  //   ctx.clearRect(0, 0, canvas.width, canvas.height);
+  //   stage.draw();
+  //   miner.draw();
+
+  //   for (const bullet of bullets) {
+  //     bullet.move();
+  //     bullet.checkCollision();
+  //   }
+
+  //   for (const rock of rocks) {
+  //     rock.move();
+  //     rock.checkCollision();
+  //   }
+
+  //   requestAnimationFrame(frame);
+  // };
+
+  // requestAnimationFrame(frame);
+
+  // const moveMinerLeftRight = (e: MouseEvent | TouchEvent) => {
+  //   const touch = e as TouchEvent;
+  //   const mouse = e as MouseEvent;
+  //   const x = miner.x + mouse.movementX * 1.9;
+
+  //   if (touch.touches) {
+  //     const tch = touch.touches[0] as Touch;
+  //     miner.x = tch.clientX * 2 - miner.w;
+  //   }
+
+  //   if (x < 0) miner.x = 16;
+  //   if (x > canvas.width - miner.w) miner.x = canvas.width - miner.w - 16;
+  //   if (x > 0 && x < canvas.width - miner.w) miner.x = x;
+  // };
+
+  // let shotter: NodeJS.Timeout;
+  // let rockSpawner: NodeJS.Timeout;
+
+  // const shoot = () => {
+  //   bullets.push(bullet());
+  // };
+
+  // const spawnRock = () => {
+  //   if (state.spawnedRocks < state.maxRocks) {
+  //     rocks.push(rock());
+  //     state.spawnedRocks++;
+  //   }
+  // };
+
+  // const startGame = () => {
+  //   rockSpawner = setInterval(spawnRock, 5000 / state.level);
+  //   console.log("Game started", state);
+  // };
+
+  // canvas.addEventListener("mousemove", moveMinerLeftRight);
+  // canvas.addEventListener("click", moveMinerLeftRight);
+  // canvas.addEventListener("touchstart", moveMinerLeftRight);
+  // canvas.addEventListener("touchmove", moveMinerLeftRight);
+
+  // canvas.addEventListener("click", shoot);
+  // canvas.addEventListener("mousedown", () => {
+  //   shotter = setInterval(shoot, state.shootCadence);
+  // });
+  // canvas.addEventListener("mouseup", () => {
+  //   clearInterval(shotter);
+  // });
+
+  // canvas.addEventListener("touchstart", () => {
+  //   shotter = setInterval(shoot, state.shootCadence);
+  // });
+  // canvas.addEventListener("touchend", () => {
+  //   clearInterval(shotter);
+  // });
+
+  // canvas.addEventListener("contextmenu", (event) => {
+  //   event.preventDefault();
+  //   startGame();
+  // });
+</script>
