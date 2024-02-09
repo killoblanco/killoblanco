@@ -1,0 +1,124 @@
+---
+import Coin from "./Coin.astro";
+---
+
+<style>
+  .tabs {
+    .tab {
+      display: flex;
+      line-height: 1;
+
+      @apply px-4 py-2 rounded-t-md border-4;
+
+      &:nth-of-type(1) {
+        @apply bg-fuchsia-600 border-fuchsia-800 hover:bg-fuchsia-700;
+      }
+
+      &:nth-of-type(2) {
+        @apply bg-indigo-600  border-indigo-800 hover:bg-indigo-700;
+      }
+
+      &:nth-of-type(3) {
+        @apply bg-cyan-600 border-cyan-800 hover:bg-cyan-700;
+      }
+
+      &:nth-of-type(4) {
+        @apply bg-emerald-600 border-emerald-800 hover:bg-emerald-700;
+      }
+    }
+  }
+
+  .tabContent {
+    margin-top: -4px;
+    @apply py-3 text-neutral-4 border-4 flex flex-row gap-4 items-center justify-around;
+
+    &:nth-of-type(2) {
+      @apply bg-fuchsia-300 border-fuchsia-800;
+    }
+
+    &:nth-of-type(3) {
+      @apply bg-indigo-300 border-indigo-800;
+    }
+
+    &:nth-of-type(4) {
+      @apply bg-cyan-300 border-cyan-800;
+    }
+
+    &.hidden {
+      display: none;
+    }
+  }
+</style>
+
+<div class="tabs flex flex-row items-end px-4">
+  <button class="tab" data-target="up-power"
+    ><span class="icon-[game-icons--swords-power] w-8 h-8"></span></button
+  >
+  <button class="tab" data-target="up-speed"
+    ><span class="icon-[game-icons--speedometer] w-8 h-8"></span></button
+  >
+  <button class="tab" data-target="up-cooldown"
+    ><span class="icon-[game-icons--extra-time] w-8 h-8"></span></button
+  >
+  <div class="grow"></div>
+  <button class="tab"
+    ><span class="icon-[game-icons--shop] w-12 h-12"></span></button
+  >
+</div>
+<div id="up-power" class="tabContent hidden">
+  <div class="flex flex-col gap-2">
+    <div class="flex items-center gap-4">
+      <span class="icon-[game-icons--swords-power] w-8 h-8"></span>
+      <p class="text-3xl leading-none">x <span>1</span></p>
+    </div>
+    <p class="text-lg font-medium">Attack Power</p>
+  </div>
+  <button class="transition-transform active:scale-110">
+    <Coin animate={false} value={10} />
+  </button>
+</div>
+<div id="up-speed" class="tabContent hidden">
+  <div class="flex flex-col gap-2">
+    <div class="flex items-center gap-4">
+      <span class="icon-[game-icons--speedometer] w-8 h-8"></span>
+      <p class="text-3xl leading-none">x <span>1</span></p>
+    </div>
+    <p class="text-lg font-medium">Bullet Speed</p>
+  </div>
+  <button class="transition-transform active:scale-110">
+    <Coin animate={false} value={10} />
+  </button>
+</div>
+<div id="up-cooldown" class="tabContent hidden">
+  <div class="flex flex-col gap-2">
+    <div class="flex items-center gap-4">
+      <span class="icon-[game-icons--extra-time] w-8 h-8"></span>
+      <p class="text-3xl leading-none">x <span>1</span></p>
+    </div>
+    <p class="text-lg font-medium">Shoot Cooldown</p>
+  </div>
+  <button class="transition-transform active:scale-110">
+    <Coin animate={false} value={10} />
+  </button>
+</div>
+
+<script>
+  import { atom } from 'nanostores';
+
+  const currentTab = atom('up-power');
+
+  const tabs = document.querySelectorAll('.tab');
+
+  for (const tab of tabs) {
+    tab.addEventListener('click', () => {
+      currentTab.set(tab.dataset.target);
+      for (const tabContent of document.querySelectorAll('.tabContent')) {
+        tabContent.classList.add('hidden');
+      }
+
+      const tabContent = document.getElementById(tab.dataset.target);
+
+      document.getElementById(tab.dataset.target).classList.remove('hidden');
+    });
+  }
+</script>
