@@ -1,0 +1,14 @@
+---
+import Menu from "@/games/fluffy-pixel-fury/Menu.astro";
+import Game from "@/games/fluffy-pixel-fury/Game.astro";
+import { type GameI } from "@/games/fluffy-pixel-fury/game.ts"
+
+interface Props {
+  params: Pick<GameI, 'state'>
+}
+
+const {state} = Astro.params;
+---
+
+{(state === 'menu' || state == null) && <Menu />}
+{state === 'playing' && <Game />}
