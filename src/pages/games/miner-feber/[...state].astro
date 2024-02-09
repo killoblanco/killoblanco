@@ -1,0 +1,14 @@
+---
+import Menu from "@/games/miner-feber/Menu.astro";
+import Game from "@/games/miner-feber/Game.astro";
+import { type GameI } from "@/games/miner-feber/game.ts"
+
+interface Props {
+  params: Pick<GameI, 'state'>
+}
+
+const {state} = Astro.params;
+---
+
+{(state === 'menu' || state == null) && <Menu />}
+{state === 'playing' && <Game />}
