@@ -1,0 +1,48 @@
+---
+type Props = {
+  position?: "left" | "right";
+  value?: number;
+  type?: "gold" | "silver";
+};
+
+const {
+  position = "left",
+  value = 0,
+  type = "silver",
+} = Astro.props;
+---
+
+<style>
+  .coin {
+    background-position: left center;
+    background-size: 320px 100%;
+    animation: coin-spin 650ms steps(10) infinite;
+  }
+
+  @keyframes coin-spin {
+    100% {
+      background-position: -2880px center;
+    }
+  }
+</style>
+
+<div class:list={[
+  "flex gap-4 items-center p-2 rounded bg-neutral-60/[0.32]",
+  {
+    "flex-row-reverse": position === "right",
+  }
+]}>
+  <div
+    class:list={[
+      "coin w-8 h-8",
+      {
+        "[background-image:url('/games/fluffy/coins/gold.webp')]":
+          type === "gold",
+        "[background-image:url('/games/fluffy/coins/silver.webp')]":
+          type === "silver",
+      },
+    ]}
+  >
+  </div>
+  <p class="font-medium leading-none mb-[-6px] text-2xl">{value}</p>
+</div>
