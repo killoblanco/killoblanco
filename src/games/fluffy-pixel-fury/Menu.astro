@@ -2,6 +2,7 @@
 import Button from "./ui/Button.astro";
 import Coin from "./ui/Coin.astro";
 import Layout from "./ui/Layout.astro";
+import UpgradeTabs from "./ui/UpgradeTabs.astro";
 ---
 
 <Layout>
@@ -34,18 +35,13 @@ import Layout from "./ui/Layout.astro";
       <p class="text-white max-w-[40ch] text-center">
         Avoid monsters and collect coins in this fast-paced game.
       </p>
-      <Button as="a" href="/games/miner-feber/playing">
+      <Button as="a" href="/games/miner-feber/playing" class="shadow-xl">
         Play
         <span class="icon-[tabler--player-play-filled] w-6 h-6"></span>
       </Button>
     </div>
-    <div
-      class:list={[
-        "col-start-1 col-end-2 row-start-3 row-end-4 z-[1]",
-        "flex flex-row justify-between items-center p-4",
-      ]}
-    >
-      hola
+    <div class="col-start-1 col-end-2 row-start-3 row-end-4 z-[1]">
+      <UpgradeTabs />
     </div>
   </div>
 </Layout>
