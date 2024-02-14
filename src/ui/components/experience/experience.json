@@ -1,0 +1,100 @@
+{
+  "companies": [
+    {
+      "name": "Globant",
+      "position": "Desarrollador Frontend",
+      "from": "2018-08-06",
+      "to": "now",
+      "highlights": []
+    },
+    {
+      "name": "The Walt Disney Company",
+      "position": "Desarrollador Frontend",
+      "from": "2022-07-01",
+      "to": "now",
+      "highlights": [
+        "Lideré un equipo de trabajo full stack en el desarrollo de una herramienta interna.",
+        "Co-lideré un equipo de frontend en la migración de otra herramienta interna.",
+        "Contribuí a mejorar la experiencia de desarrollo, reduciendo los tiempos muertos y la cantidad de incidencias reportadas mediante el uso de pruebas unitarias en el código generado."
+      ]
+    },
+    {
+      "name": "Empower Retirement",
+      "position": "Desarrollador Frontend",
+      "from": "2022-04-01",
+      "to": "2022-06-30",
+      "highlights": [
+        "Brindé soporte a la plataforma y mejoré la accesibilidad del sitio web debido a nuevas leyes en EE. UU."
+      ]
+    },
+    {
+      "name": "Stanley Black & Decker",
+      "position": "Desarrollador Frontend",
+      "from": "2019-08-01",
+      "to": "2022-03-31",
+      "highlights": [
+        "Colaboré en la creación de un sistema de administración de herramientas capaces de interactuar con la web mediante Bluetooth, incluyendo la ubicación geográfica de las herramientas registradas.",
+        "Diseñé un sistema para gestionar promociones y/o eventos de la marca."
+      ]
+    },
+    {
+      "name": "Quantcast",
+      "position": "Desarrollador Frontend",
+      "from": "2019-02-01",
+      "to": "2019-08-31",
+      "highlights": [
+        "Contribuí al desarrollo de un script que carga el consentimiento de cookies, incluyendo su apariencia y personalización."
+      ]
+    },
+    {
+      "name": "Banco Davivienda",
+      "position": "Desarrollador Frontend",
+      "from": "2018-08-01",
+      "to": "2019-01-31",
+      "highlights": [
+        "Lideré indirectamente el equipo de frontend en la creación de una PWA que agiliza el proceso de solicitud de créditos para pequeñas empresas, así como el seguimiento del flujo de caja de los negocios."
+      ]
+    },
+    {
+      "name": "Soft Dev Team",
+      "position": "Desarrollador Fullstack",
+      "from": "2017-08-01_",
+      "to": "2018-07-31",
+      "highlights": [
+        "Participé en la creación de un sistema de gestión documental escrito en React.js con MongoDB."
+      ]
+    },
+    {
+      "name": "Optime Consulting",
+      "position": "Desarrollador Backend",
+      "from": "2015-04-01",
+      "to": "2017-05-31",
+      "highlights": [
+        "Optimicé un proceso de descarga de archivos que solía llevar alrededor de 45 minutos a tan solo 10 segundos utilizando un servicio dedicado escrito en Python.",
+        "Colaboré en la implementación de SASS como compilador de CSS para las plataformas.",
+        "Creé un diccionario de datos para automatizar procesos dentro de las plataformas utilizando Vue y Symphony (un framework de PHP)."
+      ]
+    },
+    {
+      "name": "Loma Management Ltd.",
+      "position": "Desarrollador Fullstack",
+      "from": "2012-12-01",
+      "to": "2015-03-31",
+      "highlights": [
+        "Contribuí a la creación y mantenimiento de una plataforma.",
+        "Implementé gráficos relacionados con el movimiento de acciones.",
+        "Desarrollé una simulación de comunicación en tiempo real para actualizar los precios de acciones de metales preciosos."
+      ]
+    },
+    {
+      "name": "Freelance",
+      "position": "Desarrollador Fullstack",
+      "from": "2011-09-01",
+      "to": "2012-11-30",
+      "highlights": [
+        "Comencé mi carrera y apliqué todos los conocimientos adquiridos hasta ese momento.",
+        "Trabajé en diversos proyectos web, principalmente en la creación de páginas informativas."
+      ]
+    }
+  ]
+}
