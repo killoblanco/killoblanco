@@ -107,18 +107,18 @@ import Coin from "./Coin.astro";
 
   const currentTab = atom('up-power');
 
-  const tabs = document.querySelectorAll('.tab');
+  const tabs = document.querySelectorAll<HTMLDivElement>('.tab');
 
   for (const tab of tabs) {
     tab.addEventListener('click', () => {
-      currentTab.set(tab.dataset.target);
+      currentTab.set(tab.dataset.target!);
       for (const tabContent of document.querySelectorAll('.tabContent')) {
         tabContent.classList.add('hidden');
       }
 
-      const tabContent = document.getElementById(tab.dataset.target);
+      const tabContent = document.getElementById(tab.dataset.target!);
 
-      document.getElementById(tab.dataset.target).classList.remove('hidden');
+      tabContent!.classList.remove('hidden');
     });
   }
 </script>
