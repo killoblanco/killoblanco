@@ -15,6 +15,9 @@ import { parseDate, getDateDiff } from "@/ui/utils/dates";
           <p>
             {parseDate(company.from)} - {company.to === 'now' ? 'Actualidad' : parseDate(company.to)}
           </p>
+          <p>
+            {getDateDiff(company.from, company.to)}
+          </p>
           {company.highlights.length > 0 && (
             <ul class="list-disc list-inside">
               {company.highlights.map((highlight) => (
