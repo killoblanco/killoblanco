@@ -58,7 +58,7 @@
     {
       "name": "Soft Dev Team",
       "position": "Desarrollador Fullstack",
-      "from": "2017-08-01_",
+      "from": "2017-08-01",
       "to": "2018-07-31",
       "highlights": [
         "Participé en la creación de un sistema de gestión documental escrito en React.js con MongoDB."
