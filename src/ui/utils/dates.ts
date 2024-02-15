@@ -15,7 +15,7 @@ export const getDateDiff = (start: string, end: string, locale: string = 'es-CO'
   let endDate = DateTime.local({ locale })
 
   if (end !== '' && end !== 'now') endDate = DateTime.fromISO(end, { locale })
-  if (end === 'now') endDate = DateTime.now({ locale })
+  if (end === 'now') endDate = DateTime.now()
 
   const { years, months } = endDate.diff(
     DateTime.fromISO(start, { locale }),
