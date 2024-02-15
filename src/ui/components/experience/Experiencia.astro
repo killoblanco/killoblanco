@@ -8,7 +8,9 @@ import { parseDate, getDateDiff } from "@/ui/utils/dates";
   <SectionHeader icon="icon-[tabler--briefcase]" title="Experiencia" />
   <div class="flex md:flex-row md:items-end gap-20 overflow-x-auto overflow-y-hidden md:pb-4">
     {
-      experience.companies.map((company) => (
+      experience.companies.map((company) => {
+        const time = getDateDiff(company.from, company.to);
+      return (
         <div class="flex flex-col gap-2 grow max-w-screen-sm min-w-80 pl-4 border-l border-brand-60">
           <h3 class="text-3xl font-bold text-brand-80">{company.name}</h3>
           <p class="text-lg">{company.position}</p>
@@ -16,7 +18,7 @@ import { parseDate, getDateDiff } from "@/ui/utils/dates";
             {parseDate(company.from)} - {company.to === 'now' ? 'Actualidad' : parseDate(company.to)}
           </p>
           <p>
-            {getDateDiff(company.from, company.to)}
+            {time.years > 0 && `${time.years} años`} {time.months > 0 && `${time.months} meses`}
           </p>
           {company.highlights.length > 0 && (
             <ul class="list-disc list-inside">
@@ -26,7 +28,7 @@ import { parseDate, getDateDiff } from "@/ui/utils/dates";
             </ul>
           )}
         </div>
-      ))
+      )})
     }
   </div>
 </section>
