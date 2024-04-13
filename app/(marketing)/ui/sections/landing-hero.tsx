@@ -1,5 +1,5 @@
 import { Button } from "@/ui/elements/button";
-import Thumbnail from "./thumbnail";
+import Thumbnail from "../components/thumbnail";
 
 const LandingHero = () => (
   <section className="grid md:grid-cols-2 gap-8 items-center justify-items-center">

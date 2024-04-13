@@ -1,4 +1,4 @@
-import Thumbnail from "./thumbnail";
+import Thumbnail from "../components/thumbnail";
 
 const AboutInfo = () => (
   <section className="space-y-6" id="sobreMi">
