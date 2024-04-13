@@ -15,7 +15,7 @@ const LandingHero = () => (
         <span className="font-bold text-primary">
           Ingeniero de software
         </span>
-        &nbsp;de Barranquilla, Colombia. Especializado en desarrollo de paginas y aplicaciones web.
+        &nbsp;de Barranquilla, Colombia. Especializado en desarrollo de páginas y aplicaciones web.
       </p>
       <div className="inline-flex gap-4">
         <Button asChild>
