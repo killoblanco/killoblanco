@@ -14,7 +14,7 @@ type Props = {
 
 const ExperienceHighlight = ({ companyName, from, position, to, thumbnail, type }: Props) => (
   <Card className={cn(
-    "bg-cover bg-center p-6",
+    "bg-cover bg-center p-4 md:p-6",
     type === 'disney' && "bg-disney-200 border-disney-600 text-disney-950",
     type === 'globant' && "bg-globant-200 border-globant-600 text-globant-950",
     styles[type]
