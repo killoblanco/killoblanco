@@ -8,6 +8,21 @@ if (process.env.NODE_ENV === 'development') {
 }
 
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+  async redirects() {
+    return [
+      {
+        source: '/gh',
+        destination: 'https://github.com/killoblanco',
+        permanent: true,
+      },
+      {
+        source: '/in',
+        destination: 'https://linkedin.com/in/killoblanco',
+        permanent: true,
+      }
+    ]
+  }
+};
 
 export default nextConfig;
