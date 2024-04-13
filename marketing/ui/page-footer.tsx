@@ -6,7 +6,7 @@ const PageFooter = () => (
     <Link href="#top" className="inline-flex gap-1 items-center text-sm text-muted-foreground">
       <Image src="/avatar.webp" alt="Avatar" width={32} height={32} />
       <span>Volver Arriba</span>
-      <span className="icon-[tabler--arrow-narrow-up] animate-bouncing repeat-infinite size-4" />
+      <span className="icon-[tabler--arrow-narrow-up] animate-bounce size-4" />
     </Link>
     <p className="text-sm text-muted-foreground inline-flex gap-1 items-center">
       Hecho con
