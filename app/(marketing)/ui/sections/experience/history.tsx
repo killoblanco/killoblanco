@@ -18,24 +18,26 @@ type ListItemProps = {
 }
 
 const ListItem = (item: ListItemProps) => (
-  <Card className="w-full grid md:grid-cols-[auto_1fr_1fr] gap-8 p-4">
-    <Avatar className="size-20 rounded-lg">
-      <AvatarImage src={item.thumbnail} alt={item.companyName} />
-      <AvatarFallback>
-        <span className="icon-[tabler--building-skyscraper] size-8" />
-      </AvatarFallback>
-    </Avatar>
-    <div className="space-y-1.5">
-      <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
-        {item.companyName}
-      </h4>
-      <p className="leading-7 [&:not(:first-child)]:mt-6">{item.position} </p>
-      <div className="inline-flex items-center gap-2">
-        <span className="icon-[tabler--calendar] size-5" />
-        <p className="leading-7">
-          {`${item.to} - `}
-          <span className="text-sm leading-none">{item.from}</span>
-        </p>
+  <Card className="w-full grid md:grid-cols-2 gap-8 p-4">
+    <div className="grid gap-6 grid-cols-[auto_1fr]">
+      <Avatar className="size-20 rounded-lg">
+        <AvatarImage src={item.thumbnail} alt={item.companyName} />
+        <AvatarFallback>
+          <span className="icon-[tabler--building-skyscraper] size-8" />
+        </AvatarFallback>
+      </Avatar>
+      <div className="space-y-1.5">
+        <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
+          {item.companyName}
+        </h4>
+        <p className="leading-7 [&:not(:first-child)]:mt-6">{item.position} </p>
+        <div className="inline-flex items-center gap-2">
+          <span className="icon-[tabler--calendar] size-5" />
+          <p className="leading-7">
+            {`${item.to} - `}
+            <span className="text-sm leading-none">{item.from}</span>
+          </p>
+        </div>
       </div>
     </div>
     {item.highlights && (
