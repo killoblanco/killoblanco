@@ -108,7 +108,7 @@ const ExperienceHistory = () => {
           to="Enero 2019"
           thumbnail="https://media.licdn.com/dms/image/C510BAQFgUrtsFZfqdg/company-logo_200_200/0/1631371274248?e=1721260800&v=beta&t=qSTX2p4dwBuvEL2HeRgaNUOoVdY6K1q_f65ik7IXl7U"
           highlights={[
-            "Lideré indirectamente el equipo de frontend en la creación de una PWA que agiliza el proceso de solicitud de créditos para pequeñas empresas, así como el seguimiento del flujo de caja de los negocios."
+            "Lideré el equipo de frontend en la creación de una PWA que agiliza el proceso de solicitud de créditos para pequeñas empresas, así como el seguimiento del flujo de caja de los negocios."
           ]}
         />
         <ListItem
@@ -130,7 +130,7 @@ const ExperienceHistory = () => {
           highlights={[
             "Optimicé un proceso de descarga de archivos que solía llevar alrededor de 45 minutos a tan solo 10 segundos utilizando un servicio dedicado escrito en Python.",
             "Colaboré en la implementación de SASS como compilador de CSS para las plataformas.",
-            "Creé un diccionario de datos para automatizar procesos dentro de las plataformas utilizando Vue y Symphony (un framework de PHP)."
+            "Creé un diccionario de datos para automatizar procesos dentro de las plataformas utilizando Vue JS y PHP Symphony."
           ]}
         />
         <ListItem
