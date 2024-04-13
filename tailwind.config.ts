@@ -7,7 +7,6 @@ const config = {
   content: [
     './app/**/*.{ts,tsx}',
     './ui/**/*.{ts,tsx}',
-    './marketing/**/*.{ts,tsx}',
   ],
   prefix: "",
   theme: {
