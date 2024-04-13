@@ -9,11 +9,13 @@ const PageFooter = () => (
       <span className="icon-[tabler--arrow-narrow-up] animate-bounce size-4" />
     </Link>
     <p className="text-sm text-muted-foreground inline-flex gap-1 items-center">
-      Hecho con
+      <span>Hecho con</span>
       <span className="icon-[fluent-emoji--smiling-face-with-hearts] size-4" />
-      y
+      <span className="sr-only">Amor</span>
+      <span>y</span>
       <span className="icon-[fluent-emoji--hot-beverage] size-4" />
-      por
+      <span className="sr-only">Café</span>
+      <span>por</span>
       <span className="font-medium">@killoblanco</span>
     </p>
   </footer>
