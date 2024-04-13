@@ -1,4 +1,5 @@
 import { Button } from "@/ui/elements/button";
+import Link from "next/link";
 import Thumbnail from "../components/thumbnail";
 
 const LandingHero = () => (
@@ -19,16 +20,16 @@ const LandingHero = () => (
       </p>
       <div className="inline-flex gap-4">
         <Button asChild>
-          <a href="https://github.com/killoblanco" target="_social">
+          <Link href="/gh">
             <span className="icon-[tabler--brand-github] size-5 mr-2" />
             Github
-          </a>
+          </Link>
         </Button>
         <Button asChild>
-          <a href="https://linkedin.com/in/killoblanco" target="_social">
+          <Link href="/in">
             <span className="icon-[tabler--brand-linkedin] size-5 mr-2" />
             LinkedIn
-          </a>
+          </Link>
         </Button>
       </div>
     </div>
