@@ -16,7 +16,7 @@ const AboutInfo = () => (
         </p>
         <p className="leading-7 [&:not(:first-child)]:mt-6">
           A lo largo de mi carrera, he colaborado con equipos internacionales en
-          proyectos de gran envergadura, desempeñando roles clave en el
+          proyectos de escala global, desempeñando roles clave en el
           desarrollo web. Mi versatilidad no se limita solo al ámbito web, sino
           que también abarca aplicaciones móviles y de escritorio. Mi enfoque
           autodidacta me impulsa constantemente a explorar nuevas tecnologías,
