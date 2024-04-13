@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Kamilo Vasquez
 
-## Getting Started
+![Visitors] &nbsp;&nbsp;
+[![GitHub]](https://github.com/killoblanco?tab=followers) &nbsp;&nbsp;
+[![LinkedIn]](https://www.linkedin.com/in/killoblanco/) &nbsp;&nbsp;
+[![Website]](https://kamilo.dev/)
 
-First, run the development server:
+## 👨🏽‍💻 Web Developer
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+```javascript
+const killoblanco = {
+    pronouns: ['He', 'Him'],
+    languages: ['es-co', 'en-us'],
+    askMeAbout: [
+        'Software development',
+        'Tech'
+    ],
+    techStack: [
+        "Astro",
+        "Cloudflare",
+        "Daisy UI",
+        "Django",
+        "Docker",
+        "Drizzle ORM",
+        "ESLint",
+        "Lucia Auth",
+        "Radix UI",
+        "Neon DB",
+        "NextJS",
+        "Node",
+        "Playwright",
+        "React",
+        "Redux Toolkit",
+        "Tailwind CSS",
+        "TypeScript",
+        "ViteJS",
+        "Vitest",
+    ],
+    currentlyWorkingAs: 'Front-End Developer'
+}
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## About me
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+![Visitors] &nbsp;&nbsp;
+![GitHub] &nbsp;&nbsp;
+[![LinkedIn]](https://www.linkedin.com/in/killoblanco/) &nbsp;&nbsp;
+[![Website]](https://kamilo.dev/)
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Passionate software developer with over a decade of experience since 2010. My goal is to create innovative technological solutions that have a positive impact on people's lives.
 
-## Learn More
+Throughout my career, I have collaborated with international teams on large-scale projects, playing key roles in web development. My versatility is not only limited to the web realm but also encompasses mobile and desktop applications. My self-taught approach constantly drives me to explore new technologies, and I'm particularly excited about the world of Artificial Intelligence.
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+[visitors]: https://visitor-badge.laobi.icu/badge?page_id=killoblanco
+[github]: https://img.shields.io/github/followers/killoblanco?style=social
+[linkedin]: https://img.shields.io/badge/-Kamilo_Vasquez-blue?style=plastic&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/killoblanco/
+[website]: https://img.shields.io/badge/-Website-blue?style=plastic&logo=MicrosoftEdge&color=3277BC&link=https://kamilo.dev/
