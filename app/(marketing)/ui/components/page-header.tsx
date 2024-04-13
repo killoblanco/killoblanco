@@ -7,7 +7,7 @@ const PageHeader = () => (
     <Tabs defaultValue="top">
       <TabsList>
         <TabsTrigger value="top" asChild>
-          <Link href="/">Home</Link>
+          <Link href="/">Spotlight</Link>
         </TabsTrigger>
         <TabsTrigger value="experiencia" asChild>
           <Link href="#experiencia">Experiencia</Link>
