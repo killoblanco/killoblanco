@@ -17,7 +17,7 @@ const BodegaNavbar = () => {
     <Tabs defaultValue={value ?? 'productos'} onValueChange={onChange}>
       <TabsList>
         <TabsTrigger value="productos">Productos</TabsTrigger>
-        <TabsTrigger value="categorias">Categorias</TabsTrigger>
+        <TabsTrigger value="categorias">Categorías</TabsTrigger>
         <TabsTrigger value="atributos">Atributos</TabsTrigger>
         <TabsTrigger value="inventario">Inventario</TabsTrigger>
         <TabsTrigger value="valoraciones">Valoraciones</TabsTrigger>
