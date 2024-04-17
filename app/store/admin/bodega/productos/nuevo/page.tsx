@@ -2,7 +2,6 @@
 
 import { Button } from "@/ui/elements/button";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/ui/elements/card";
-import { Popover, PopoverContent, PopoverTrigger } from "@/ui/elements/popover";
 import Link from "next/link";
 
 const NewProductPage = () => {
