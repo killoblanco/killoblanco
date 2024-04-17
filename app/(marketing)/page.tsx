@@ -6,7 +6,7 @@ import LandingHero from "./ui/sections/landing-hero";
 
 export default function Home() {
   return (
-    <main className="container max-w-screen-xl py-8 space-y-20" id="top">
+    <main className="container py-8 space-y-20" id="top">
       <PageHeader />
       <LandingHero />
       <Experience />
