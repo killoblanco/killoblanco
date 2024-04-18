@@ -28,7 +28,6 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div className="fixed inset-0 -z-10 h-full w-full bg-[radial-gradient(#d4d4d8_1px,transparent_1px)] dark:opacity-15 [background-size:16px_16px]" />
           {children}
         </ThemeProvider>
       </body>
