@@ -3,7 +3,7 @@ import { Input } from "@/ui/elements/input";
 import { Label } from "@/ui/elements/label";
 import { Switch } from "@/ui/elements/switch";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/ui/elements/tooltip";
-import { CollapsibleCard } from "../../../../../../../../ui/components/collapsible-card";
+import { CollapsibleCard } from "@/ui/components/collapsible-card";
 
 export const SimpleProductInventoryInfoGroup = () => {
   return (

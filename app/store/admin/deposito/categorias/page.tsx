@@ -1,4 +1,5 @@
 import { CategoryForm } from "./form"
+import { CategoriesTreeBrowser } from "./tree-browser"
 
 const ProductCategoriesPage = () => {
   return (
@@ -11,7 +12,7 @@ const ProductCategoriesPage = () => {
           <CategoryForm />
         </div>
         <div className="grid-cols-1">
-          placeholder
+          <CategoriesTreeBrowser />
         </div>
       </div>
     </>

@@ -27,7 +27,7 @@ export const CategoryForm = () => {
               <p className="text-lg font-semibold">
                 Cargar portada
               </p>
-              <p className="text-sm text-muted-foreground">
+              <p className="text-xs text-muted-foreground">
                 Haga clic para cargar una imagen de portada para esta categoría.
               </p>
             </div>
@@ -84,7 +84,7 @@ export const CategoryForm = () => {
           </p>
         </div>
       </CardContent>
-      <CardFooter>
+      <CardFooter className="p-4 pt-0">
         <Button>
           Añadir nueva categoría
         </Button>

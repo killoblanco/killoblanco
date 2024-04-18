@@ -1,4 +1,4 @@
-import { CollapsibleCard } from "../../../../../../../../ui/components/collapsible-card";
+import { CollapsibleCard } from "@/ui/components/collapsible-card";
 
 export const ProductAttributesInfoGroup = () => {
   return (

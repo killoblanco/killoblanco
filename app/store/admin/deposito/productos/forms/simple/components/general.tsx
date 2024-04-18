@@ -6,7 +6,7 @@ import { Separator } from "@/ui/elements/separator";
 import { Switch } from "@/ui/elements/switch";
 import { Textarea } from "@/ui/elements/textarea";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/ui/elements/tooltip";
-import { CollapsibleCard } from "../../../../../../../../ui/components/collapsible-card";
+import { CollapsibleCard } from "@/ui/components/collapsible-card";
 
 export const ProductGeneralInfoGroup = () => {
   return (
@@ -36,19 +36,11 @@ export const ProductGeneralInfoGroup = () => {
         <Input />
       </div>
       <div className="grid w-full items-center gap-2">
-        <Label>Categorias</Label>
-        <Input />
-      </div>
-      <div className="grid w-full items-center gap-2">
         <Label>Descripción corta</Label>
         <Textarea cols={5} />
         <p className="text-sm text-muted-foreground">
           0 / 280
         </p>
-      </div>
-      <div className="grid w-full items-center gap-2">
-        <Label>Etiquetas</Label>
-        <Input />
       </div>
       <div className="grid grid-cols-[1fr_auto] w-full items-center gap-2 p-4 border border-border rounded-md">
         <div className="grid w-full items-center gap-1.5">
