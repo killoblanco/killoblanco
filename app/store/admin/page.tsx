@@ -27,7 +27,7 @@ const AdminLandingPage = () => (
       </CardContent>
       <CardFooter>
         <Button asChild>
-          <Link href="admin/bodega/productos/nuevo">
+          <Link href="admin/deposito/productos/nuevo">
             Añadir Productos
           </Link>
         </Button>
