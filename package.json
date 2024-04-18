@@ -13,6 +13,8 @@
     "build-cf-types": "wrangler types --env-interface CloudflareEnv cf.d.ts"
   },
   "dependencies": {
+    "@lexical/react": "0.14.5",
+    "@radix-ui/react-accordion": "1.1.2",
     "@radix-ui/react-avatar": "1.0.4",
     "@radix-ui/react-checkbox": "1.0.4",
     "@radix-ui/react-collapsible": "1.0.3",
@@ -27,9 +29,12 @@
     "@radix-ui/react-slot": "1.0.2",
     "@radix-ui/react-switch": "1.0.3",
     "@radix-ui/react-tabs": "1.0.4",
+    "@radix-ui/react-toggle": "1.0.3",
+    "@radix-ui/react-toggle-group": "1.0.4",
     "@radix-ui/react-tooltip": "1.0.7",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
+    "lexical": "0.14.5",
     "next": "14.2.1",
     "next-themes": "0.3.0",
     "react": "18.2.0",
