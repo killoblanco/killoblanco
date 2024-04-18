@@ -28,10 +28,10 @@ const AdminNavbar = () => {
         </SelectItem>
         <SelectSeparator />
         <SelectGroup>
-          <SelectItem value="bodega">
+          <SelectItem value="deposito">
             <div className="inline-flex gap-2 items-center">
               <span className="icon-[tabler--building-warehouse] size-4" />
-              Bodega
+              Depósito
             </div>
           </SelectItem>
           <SelectItem value="caja">
