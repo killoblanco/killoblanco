@@ -1,8 +1,8 @@
-import { Tabs, TabsList, TabsTrigger } from "@/ui/elements/tabs";
-import { ModeToggle } from "@/ui/mode-toggle";
-import Link from "next/link";
+import { Tabs, TabsList, TabsTrigger } from '@/ui/elements/tabs'
+import { ModeToggle } from '@/ui/mode-toggle'
+import Link from 'next/link'
 
-const PageHeader = () => (
+const PageHeader = (): JSX.Element => (
   <header className="flex items-center justify-between sticky top-8 z-50 p-2 bg-zinc-100/40 dark:bg-zinc-900/40 backdrop-blur-sm rounded-lg">
     <Tabs defaultValue="top">
       <TabsList>
@@ -21,4 +21,4 @@ const PageHeader = () => (
   </header>
 )
 
-export default PageHeader;
+export default PageHeader

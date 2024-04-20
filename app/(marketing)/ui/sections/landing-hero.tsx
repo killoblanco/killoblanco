@@ -1,8 +1,8 @@
-import { Button } from "@/ui/elements/button";
-import Link from "next/link";
-import Thumbnail from "../components/thumbnail";
+import { Button } from '@/ui/elements/button'
+import Link from 'next/link'
+import Thumbnail from '../components/thumbnail'
 
-const LandingHero = () => (
+const LandingHero = (): JSX.Element => (
   <section className="grid md:grid-cols-2 gap-8 items-center justify-items-center">
     <div className="space-y-4">
       <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
@@ -37,4 +37,4 @@ const LandingHero = () => (
   </section>
 )
 
-export default LandingHero;
+export default LandingHero

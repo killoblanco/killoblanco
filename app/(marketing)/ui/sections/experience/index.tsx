@@ -1,7 +1,7 @@
-import ExperienceHighlight from "./highlight";
-import ExperienceHistory from "./history";
+import ExperienceHighlight from './highlight'
+import ExperienceHistory from './history'
 
-const Experience = () => (
+const Experience = (): JSX.Element => (
   <section className="space-y-6" id="experiencia">
     <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight inline-flex items-center">
       <span className="icon-[tabler--briefcase] size-9 mr-2" />
@@ -29,4 +29,4 @@ const Experience = () => (
   </section>
 )
 
-export default Experience;
+export default Experience

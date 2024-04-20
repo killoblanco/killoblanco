@@ -1,17 +1,21 @@
-'use client';
+'use client'
 
-import { Card } from "@/ui/elements/card";
-import { Collapsible, CollapsibleContent } from "@/ui/elements/collapsible";
-import { CollapsibleTrigger } from "@radix-ui/react-collapsible";
-import { useState, type JSX, type PropsWithChildren } from 'react';
+import { Card } from '@/ui/elements/card'
+import { Collapsible, CollapsibleContent } from '@/ui/elements/collapsible'
+import { CollapsibleTrigger } from '@radix-ui/react-collapsible'
+import { useState, type JSX, type PropsWithChildren } from 'react'
 
-type Props = {
+interface Props {
   title: JSX.Element
   open?: boolean
 }
 
-export const CollapsibleCard = ({ title, open = false, children }: PropsWithChildren<Props>) => {
-  const [isOpen, setIsOpen] = useState(open);
+export const CollapsibleCard = ({
+  title,
+  open = false,
+  children
+}: PropsWithChildren<Props>): JSX.Element => {
+  const [isOpen, setIsOpen] = useState(open)
 
   return (
     <Card className="p-4">

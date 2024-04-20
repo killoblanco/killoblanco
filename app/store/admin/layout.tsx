@@ -1,14 +1,14 @@
-import PageFooter from "@/app/(marketing)/ui/components/page-footer";
-import { Metadata } from "next";
-import { PropsWithChildren } from "react";
-import AdminTopbar from "./ui/topbar";
+import PageFooter from '@/app/(marketing)/ui/components/page-footer'
+import { type Metadata } from 'next'
+import { type PropsWithChildren } from 'react'
+import AdminTopbar from './ui/topbar'
 
 export const metadata: Metadata = {
-  title: "Tienda Admin",
-  description: "Panel de administración de la tienda",
-};
+  title: 'Tienda Admin',
+  description: 'Panel de administración de la tienda'
+}
 
-const AdminPageLayout = ({ children }: PropsWithChildren) => (
+const AdminPageLayout = ({ children }: PropsWithChildren): JSX.Element => (
   <main className="container py-4 space-y-4" id="top">
     <AdminTopbar />
     {children}
@@ -16,4 +16,4 @@ const AdminPageLayout = ({ children }: PropsWithChildren) => (
   </main>
 )
 
-export default AdminPageLayout;
+export default AdminPageLayout

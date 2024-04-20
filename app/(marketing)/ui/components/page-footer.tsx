@@ -1,7 +1,7 @@
-import Image from 'next/image';
-import Link from 'next/link';
+import Image from 'next/image'
+import Link from 'next/link'
 
-const PageFooter = () => (
+const PageFooter = (): JSX.Element => (
   <footer className="border-t border-t-border py-8 flex flex-col md:flex-row gap-4 items-center justify-between">
     <Link href="#top" className="inline-flex gap-1 items-center text-sm text-muted-foreground">
       <Image src="/avatar.webp" alt="Avatar" width={32} height={32} />
@@ -20,4 +20,4 @@ const PageFooter = () => (
     </p>
   </footer>
 )
-export default PageFooter;
+export default PageFooter

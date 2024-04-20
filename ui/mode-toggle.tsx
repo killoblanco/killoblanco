@@ -1,16 +1,16 @@
-"use client"
+'use client'
 
-import { useTheme } from "next-themes"
+import { useTheme } from 'next-themes'
 
-import { Button } from "@/ui/elements/button"
+import { Button } from '@/ui/elements/button'
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/ui/elements/dropdown-menu"
+  DropdownMenuTrigger
+} from '@/ui/elements/dropdown-menu'
 
-export function ModeToggle() {
+export function ModeToggle (): JSX.Element {
   const { setTheme } = useTheme()
 
   return (
@@ -23,15 +23,15 @@ export function ModeToggle() {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
-        <DropdownMenuItem onClick={() => setTheme("light")}>
+        <DropdownMenuItem onClick={() => { setTheme('light') }}>
           <span className="size-4 mr-2 icon-[tabler--sun]" />
           Claro
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme("dark")}>
+        <DropdownMenuItem onClick={() => { setTheme('dark') }}>
           <span className="size-4 mr-2 icon-[tabler--moon-stars]" />
           Oscuro
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme("system")}>
+        <DropdownMenuItem onClick={() => { setTheme('system') }}>
           <span className="size-4 mr-2 icon-[tabler--device-desktop]" />
           Sistema
         </DropdownMenuItem>

@@ -1,7 +1,7 @@
-import { CollapsibleCard } from "@/ui/components/collapsible-card"
-import { TextEditorField } from "@/ui/form-fields/text-editor"
+import { CollapsibleCard } from '@/ui/components/collapsible-card'
+import { TextEditorField } from '@/ui/form-fields/text-editor'
 
-export const ProductDescriptionInfoGroup = () => {
+export const ProductDescriptionInfoGroup = (): JSX.Element => {
   return (
     <CollapsibleCard
       title={(

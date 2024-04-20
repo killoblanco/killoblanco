@@ -1,6 +1,6 @@
-import { CollapsibleCard } from "@/ui/components/collapsible-card";
+import { CollapsibleCard } from '@/ui/components/collapsible-card'
 
-export const ProductAttributesInfoGroup = () => {
+export const ProductAttributesInfoGroup = (): JSX.Element => {
   return (
     <CollapsibleCard
       title={(

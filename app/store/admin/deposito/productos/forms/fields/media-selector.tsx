@@ -1,7 +1,7 @@
-import { Button } from "@/ui/elements/button";
-import { Card } from "@/ui/elements/card";
+import { Button } from '@/ui/elements/button'
+import { Card } from '@/ui/elements/card'
 
-const ProductMediaSelectorField = () => {
+const ProductMediaSelectorField = (): JSX.Element => {
   return (
     <Card className="p-4 grid grid-cols-2 grid-rows-[1fr_auto] gap-4">
       <div className="aspect-square bg-muted rounded-lg col-start-1 col-end-2 row-span-1" />
@@ -33,4 +33,4 @@ const ProductMediaSelectorField = () => {
   )
 }
 
-export default ProductMediaSelectorField;
+export default ProductMediaSelectorField

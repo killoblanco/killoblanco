@@ -1,16 +1,16 @@
-'use client';
+'use client'
 
-import { useRouter } from "next/navigation";
-import { useEffect } from "react";
+import { useRouter } from 'next/navigation'
+import { useEffect } from 'react'
 
-const BodegaLandingPage = () => {
-  const router = useRouter();
+const BodegaLandingPage = (): null => {
+  const router = useRouter()
 
   useEffect(() => {
-    router.replace("deposito/productos");
-  }, [])
+    router.replace('deposito/productos')
+  }, [router])
 
-  return null;
+  return null
 }
 
-export default BodegaLandingPage;
+export default BodegaLandingPage

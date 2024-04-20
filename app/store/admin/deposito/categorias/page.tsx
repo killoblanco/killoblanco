@@ -1,7 +1,7 @@
-import { CategoryForm } from "./form"
-import { CategoriesTreeBrowser } from "./tree-browser"
+import { CategoryForm } from './form'
+import { CategoriesTreeBrowser } from './tree-browser'
 
-const ProductCategoriesPage = () => {
+const ProductCategoriesPage = (): JSX.Element => {
   return (
     <>
       <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight col-span-5 col-start-2">

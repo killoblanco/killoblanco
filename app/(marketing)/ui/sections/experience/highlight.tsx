@@ -1,22 +1,22 @@
-import { Avatar, AvatarImage } from "@/ui/elements/avatar"
-import { Card, CardContent } from "@/ui/elements/card"
-import { cn } from "@/ui/utils"
+import { Avatar, AvatarImage } from '@/ui/elements/avatar'
+import { Card, CardContent } from '@/ui/elements/card'
+import { cn } from '@/ui/utils'
 import styles from './experience.module.css'
 
-type Props = {
-  companyName: string,
-  from: string,
-  position: string,
-  to: string,
-  thumbnail: string,
-  type: 'globant' | 'disney',
+interface Props {
+  companyName: string
+  from: string
+  position: string
+  to: string
+  thumbnail: string
+  type: 'globant' | 'disney'
 }
 
-const ExperienceHighlight = ({ companyName, from, position, to, thumbnail, type }: Props) => (
+const ExperienceHighlight = ({ companyName, from, position, to, thumbnail, type }: Props): JSX.Element => (
   <Card className={cn(
-    "bg-cover bg-center p-4 md:p-6",
-    type === 'disney' && "bg-disney-200 border-disney-600 text-disney-950",
-    type === 'globant' && "bg-globant-200 border-globant-600 text-globant-950",
+    'bg-cover bg-center p-4 md:p-6',
+    type === 'disney' && 'bg-disney-200 border-disney-600 text-disney-950',
+    type === 'globant' && 'bg-globant-200 border-globant-600 text-globant-950',
     styles[type]
   )}>
     <CardContent className="p-0 pt-4 flex flex-col items-start justify-end gap-2">
@@ -24,9 +24,9 @@ const ExperienceHighlight = ({ companyName, from, position, to, thumbnail, type 
         <AvatarImage src={thumbnail} alt={companyName} />
       </Avatar>
       <h4 className={cn(
-        "scroll-m-20 text-2xl font-bold tracking-tight",
-        type === 'disney' && "text-disney-600",
-        type === 'globant' && "text-globant-600",
+        'scroll-m-20 text-2xl font-bold tracking-tight',
+        type === 'disney' && 'text-disney-600',
+        type === 'globant' && 'text-globant-600'
       )}>
         {companyName}
       </h4>

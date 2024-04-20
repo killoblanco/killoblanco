@@ -1,16 +1,16 @@
 'use client'
 
-import { Card, CardContent, CardHeader } from '@/ui/elements/card';
-import { cn } from '@/ui/utils';
-import { ListNode, ListItemNode } from '@lexical/list';
-import { LexicalComposer } from '@lexical/react/LexicalComposer';
-import { ContentEditable } from '@lexical/react/LexicalContentEditable';
-import LexicalErrorBoundary from '@lexical/react/LexicalErrorBoundary';
-import { HistoryPlugin } from '@lexical/react/LexicalHistoryPlugin';
-import { ListPlugin } from '@lexical/react/LexicalListPlugin';
-import { RichTextPlugin } from '@lexical/react/LexicalRichTextPlugin';
-import { HeadingNode, QuoteNode } from '@lexical/rich-text';
-import Toolbar from './plugins/toolbar';
+import { Card, CardContent, CardHeader } from '@/ui/elements/card'
+import { cn } from '@/ui/utils'
+import { ListItemNode, ListNode } from '@lexical/list'
+import { LexicalComposer } from '@lexical/react/LexicalComposer'
+import { ContentEditable } from '@lexical/react/LexicalContentEditable'
+import LexicalErrorBoundary from '@lexical/react/LexicalErrorBoundary'
+import { HistoryPlugin } from '@lexical/react/LexicalHistoryPlugin'
+import { ListPlugin } from '@lexical/react/LexicalListPlugin'
+import { RichTextPlugin } from '@lexical/react/LexicalRichTextPlugin'
+import { HeadingNode, QuoteNode } from '@lexical/rich-text'
+import Toolbar from './plugins/toolbar'
 
 const initialConfig = {
   namespace: 'text-editor',
@@ -20,11 +20,11 @@ const initialConfig = {
       h1: 'scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl [&:not(:first-child)]:mt-6',
       h2: 'scroll-m-20 text-3xl font-semibold tracking-tight border-b pb-2 [&:not(:first-child)]:mt-6',
       h3: 'scroll-m-20 text-2xl font-semibold tracking-tight [&:not(:first-child)]:mt-6',
-      h4: 'scroll-m-20 text-xl font-semibold tracking-tight [&:not(:first-child)]:mt-6',
+      h4: 'scroll-m-20 text-xl font-semibold tracking-tight [&:not(:first-child)]:mt-6'
     },
     list: {
       ul: 'my-6 ml-6 list-disc [&>li]:mt-2',
-      ol: 'my-6 ml-6 list-decimal [&>li]:mt-2',
+      ol: 'my-6 ml-6 list-decimal [&>li]:mt-2'
     },
     paragraph: 'leading-7 [&:not(:first-child)]:mt-6',
     quote: 'mt-6 border-l-2 pl-6 italic',
@@ -32,13 +32,13 @@ const initialConfig = {
       bold: 'font-bold',
       italic: 'italic',
       underline: 'underline',
-      strikethrough: 'line-through [&.underline]:[text-decoration:underline_line-through]',
+      strikethrough: 'line-through [&.underline]:[text-decoration:underline_line-through]'
     }
   },
   onError: console.error
 } as const
 
-export const TextEditorField = () => (
+export const TextEditorField = (): JSX.Element => (
   <LexicalComposer initialConfig={initialConfig}>
     <Card className={cn(
       'w-full rounded-md border border-input bg-transparent transition-colors',

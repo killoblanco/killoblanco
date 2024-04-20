@@ -1,12 +1,12 @@
-import { Badge } from "@/ui/elements/badge"
-import { Button } from "@/ui/elements/button"
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/ui/elements/card"
-import { Input } from "@/ui/elements/input"
-import { Label } from "@/ui/elements/label"
-import { Select, SelectContent, SelectGroup, SelectItem, SelectTrigger, SelectValue } from "@/ui/elements/select"
-import { Textarea } from "@/ui/elements/textarea"
+import { Badge } from '@/ui/elements/badge'
+import { Button } from '@/ui/elements/button'
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/ui/elements/card'
+import { Input } from '@/ui/elements/input'
+import { Label } from '@/ui/elements/label'
+import { Select, SelectContent, SelectGroup, SelectItem, SelectTrigger, SelectValue } from '@/ui/elements/select'
+import { Textarea } from '@/ui/elements/textarea'
 
-export const CategoryForm = () => {
+export const CategoryForm = (): JSX.Element => {
   return (
     <Card>
       <CardHeader className="p-4">

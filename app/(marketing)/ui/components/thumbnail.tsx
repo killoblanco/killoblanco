@@ -1,7 +1,7 @@
-import { Avatar, AvatarFallback, AvatarImage } from "@/ui/elements/avatar";
-import Image from "next/image";
+import { Avatar, AvatarFallback, AvatarImage } from '@/ui/elements/avatar'
+import Image from 'next/image'
 
-const Thumbnail = () => (
+const Thumbnail = (): JSX.Element => (
   <Avatar className="size-64">
     <AvatarImage src="https://github.com/killoblanco.png" alt="@killoblanco" />
     <AvatarFallback>
@@ -10,4 +10,4 @@ const Thumbnail = () => (
   </Avatar>
 )
 
-export default Thumbnail;
+export default Thumbnail

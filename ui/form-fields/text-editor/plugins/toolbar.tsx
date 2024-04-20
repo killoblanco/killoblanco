@@ -1,67 +1,65 @@
 'use client'
 
-import { Select, SelectContent, SelectGroup, SelectItem, SelectSeparator, SelectTrigger, SelectValue } from '@/ui/elements/select';
-import { Separator } from '@/ui/elements/separator';
-import { ToggleGroup, ToggleGroupItem } from '@/ui/elements/toggle-group';
+import { Select, SelectContent, SelectGroup, SelectItem, SelectSeparator, SelectTrigger, SelectValue } from '@/ui/elements/select'
+import { Separator } from '@/ui/elements/separator'
+import { ToggleGroup, ToggleGroupItem } from '@/ui/elements/toggle-group'
 import {
   $isListNode,
   INSERT_ORDERED_LIST_COMMAND,
   INSERT_UNORDERED_LIST_COMMAND,
-  ListNode,
-  insertList
-} from '@lexical/list';
-import { useLexicalComposerContext } from '@lexical/react/LexicalComposerContext';
+  ListNode
+} from '@lexical/list'
+import { useLexicalComposerContext } from '@lexical/react/LexicalComposerContext'
 import {
   $createHeadingNode,
   $createQuoteNode,
   $isHeadingNode,
-  HeadingTagType
-} from '@lexical/rich-text';
+  type HeadingTagType
+} from '@lexical/rich-text'
 import {
   $setBlocksType
-} from '@lexical/selection';
+} from '@lexical/selection'
 import {
   $findMatchingParent,
   $getNearestNodeOfType
-} from '@lexical/utils';
+} from '@lexical/utils'
 import {
   $createParagraphNode,
   $getSelection,
   $isRangeSelection,
   $isRootOrShadowRoot,
   COMMAND_PRIORITY_CRITICAL,
-  COMMAND_PRIORITY_LOW,
-  ElementFormatType,
+  type ElementFormatType,
   FORMAT_ELEMENT_COMMAND,
   FORMAT_TEXT_COMMAND,
   SELECTION_CHANGE_COMMAND,
-  TextFormatType
-} from 'lexical';
-import { useEffect, useState } from 'react';
+  type TextFormatType
+} from 'lexical'
+import { useEffect, useState } from 'react'
 
-const FormatControls = () => {
-  const [editor] = useLexicalComposerContext();
-  const [activeItems, setActiveItems] = useState<string[]>([]);
+const FormatControls = (): JSX.Element => {
+  const [editor] = useLexicalComposerContext()
+  const [activeItems, setActiveItems] = useState<string[]>([])
 
   useEffect(() => {
     return editor.registerUpdateListener(({ editorState }) => {
       editorState.read(() => {
-        const selection = $getSelection();
+        const selection = $getSelection()
 
         if ($isRangeSelection(selection)) {
           const nextItems = [
             selection.hasFormat('bold') && 'bold',
             selection.hasFormat('italic') && 'italic',
             selection.hasFormat('underline') && 'underline',
-            selection.hasFormat('strikethrough') && 'strikethrough',
+            selection.hasFormat('strikethrough') && 'strikethrough'
           ].filter(Boolean) as string[]
-          setActiveItems(nextItems);
+          setActiveItems(nextItems)
         }
-      });
-    });
-  }, [editor]);
+      })
+    })
+  }, [editor])
 
-  const onFormat = (format: string[]) => {
+  const onFormat = (format: string[]): void => {
     const addedItem = format
       .map((f) => activeItems.includes(f) ? false : f)
       .filter(Boolean)
@@ -71,9 +69,9 @@ const FormatControls = () => {
       .filter(Boolean)
 
     for (const item of [...addedItem, ...removedItem]) {
-      editor.dispatchCommand(FORMAT_TEXT_COMMAND, item as TextFormatType);
+      editor.dispatchCommand(FORMAT_TEXT_COMMAND, item as TextFormatType)
     }
-  };
+  }
 
   return (
     <ToggleGroup type="multiple" variant="outline" size="sm" value={activeItems} onValueChange={onFormat}>
@@ -90,15 +88,15 @@ const FormatControls = () => {
         <span className='size-4 icon-[tabler--strikethrough]' />
       </ToggleGroupItem>
     </ToggleGroup>
-  );
-};
+  )
+}
 
-const AlignmentControls = () => {
-  const [editor] = useLexicalComposerContext();
+const AlignmentControls = (): JSX.Element => {
+  const [editor] = useLexicalComposerContext()
 
-  const onFormat = (format: string) => {
-    editor.dispatchCommand(FORMAT_ELEMENT_COMMAND, format as ElementFormatType);
-  };
+  const onFormat = (format: string): void => {
+    editor.dispatchCommand(FORMAT_ELEMENT_COMMAND, format as ElementFormatType)
+  }
 
   return (
     <ToggleGroup type="single" variant="outline" size="sm" onValueChange={onFormat}>
@@ -112,42 +110,42 @@ const AlignmentControls = () => {
         <span className='size-4 icon-[tabler--align-right]' />
       </ToggleGroupItem>
     </ToggleGroup>
-  );
-};
+  )
+}
 
-const BlockFormatControls = () => {
-  const [editor] = useLexicalComposerContext();
-  const [blockType, setBlockType] = useState<string>('p');
+const BlockFormatControls = (): JSX.Element => {
+  const [editor] = useLexicalComposerContext()
+  const [blockType, setBlockType] = useState<string>('p')
 
   useEffect(() => {
     return editor.registerCommand(
       SELECTION_CHANGE_COMMAND,
       () => {
-        const selection = $getSelection();
+        const selection = $getSelection()
 
         if ($isRangeSelection(selection)) {
-          const anchorNode = selection.anchor.getNode();
+          const anchorNode = selection.anchor.getNode()
           let element =
             anchorNode.getKey() === 'root'
               ? anchorNode
               : $findMatchingParent(anchorNode, (e) => {
-                const parent = e.getParent();
-                return parent !== null && $isRootOrShadowRoot(parent);
-              });
+                const parent = e.getParent()
+                return parent !== null && $isRootOrShadowRoot(parent)
+              })
 
           if (element === null) {
-            element = anchorNode.getTopLevelElementOrThrow();
+            element = anchorNode.getTopLevelElementOrThrow()
           }
 
-          const elementKey = element.getKey();
-          const elementDOM = editor.getElementByKey(elementKey);
+          const elementKey = element.getKey()
+          const elementDOM = editor.getElementByKey(elementKey)
 
           if (elementDOM !== null) {
-            let type: string;
+            let type: string
 
             if ($isListNode(element)) {
               const parentList = $getNearestNodeOfType<ListNode>(anchorNode, ListNode)
-              type = parentList ? parentList.getListType() : element.getListType()
+              type = (parentList != null) ? parentList.getListType() : element.getListType()
             } else {
               type = $isHeadingNode(element) ? element.getTag() : element.getType()
             }
@@ -160,21 +158,21 @@ const BlockFormatControls = () => {
               h4: 'h4',
               number: 'ol',
               parragraph: 'p',
-              quote: 'quote',
+              quote: 'quote'
             }
 
             setBlockType(typeMap[type as keyof typeof typeMap] ?? 'p')
           }
         }
-        return false;
+        return false
       },
       COMMAND_PRIORITY_CRITICAL
     )
   }, [editor])
 
-  const onChangeBlockType = (type: string) => {
+  const onChangeBlockType = (type: string): void => {
     editor.update(() => {
-      const selection = $getSelection();
+      const selection = $getSelection()
 
       if (type === 'p') {
         if ($isRangeSelection(selection)) {
@@ -192,7 +190,7 @@ const BlockFormatControls = () => {
       }
 
       if (type === 'quote') {
-        $setBlocksType(selection, () => $createQuoteNode());
+        $setBlocksType(selection, () => $createQuoteNode())
       }
 
       setBlockType(type)
@@ -261,7 +259,7 @@ const BlockFormatControls = () => {
   )
 }
 
-const Toolbar = () => {
+const Toolbar = (): JSX.Element => {
   return (
     <div className="flex items-stretch gap-2">
       <BlockFormatControls />
@@ -270,7 +268,7 @@ const Toolbar = () => {
       <Separator orientation="vertical" className='h-auto' />
       <AlignmentControls />
     </div>
-  );
-};
+  )
+}
 
-export default Toolbar;
+export default Toolbar

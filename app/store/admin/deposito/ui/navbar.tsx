@@ -1,15 +1,15 @@
 'use client'
 
-import { Tabs, TabsList, TabsTrigger } from "@/ui/elements/tabs"
-import { usePathname, useRouter } from "next/navigation"
+import { Tabs, TabsList, TabsTrigger } from '@/ui/elements/tabs'
+import { usePathname, useRouter } from 'next/navigation'
 
-const BodegaNavbar = () => {
+const BodegaNavbar = (): JSX.Element => {
   const router = useRouter()
   const pathname = usePathname()
 
   const [value] = pathname.replace('/store/admin/deposito', '').split('/').filter(Boolean)
 
-  const onChange = (value: string) => {
+  const onChange = (value: string): void => {
     router.push(`/store/admin/deposito/${value === 'productos' ? '' : value}`)
   }
 

@@ -1,7 +1,7 @@
-import { IconBackBtn } from "@/ui/components/back-btn";
-import SimpleProductForm from "../../forms/simple";
+import { IconBackBtn } from '@/ui/components/back-btn'
+import SimpleProductForm from '../../forms/simple'
 
-const NewSingleProductPage = () => {
+const NewSingleProductPage = (): JSX.Element => {
   return (
     <>
       <div className="inline-flex gap-4 items-center">
@@ -15,4 +15,4 @@ const NewSingleProductPage = () => {
   )
 }
 
-export default NewSingleProductPage;
+export default NewSingleProductPage

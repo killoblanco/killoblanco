@@ -1,16 +1,15 @@
-"use client"
+'use client'
 
-import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectSeparator, SelectTrigger, SelectValue } from "@/ui/elements/select";
-import { usePathname, useRouter } from "next/navigation";
-import { useState } from "react";
+import { Select, SelectContent, SelectGroup, SelectItem, SelectSeparator, SelectTrigger, SelectValue } from '@/ui/elements/select'
+import { usePathname, useRouter } from 'next/navigation'
 
-const AdminNavbar = () => {
+const AdminNavbar = (): JSX.Element => {
   const router = useRouter()
   const pathname = usePathname()
 
   const [value] = pathname.replace('/store/admin', '').split('/').filter(Boolean)
 
-  const onChange = (value: string) => {
+  const onChange = (value: string): void => {
     router.push(`/store/admin/${value === '/' ? '' : value}`)
   }
 
@@ -71,4 +70,4 @@ const AdminNavbar = () => {
   )
 }
 
-export default AdminNavbar;
+export default AdminNavbar

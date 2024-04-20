@@ -1,7 +1,7 @@
-import { Button } from "@/ui/elements/button"
-import Link from "next/link"
+import { Button } from '@/ui/elements/button'
+import Link from 'next/link'
 
-const ProductsPage = () => {
+const ProductsPage = (): JSX.Element => {
   return (
     <div className="inline-flex gap-4 items-center">
     <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight col-span-5 col-start-2">

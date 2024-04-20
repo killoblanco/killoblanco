@@ -1,11 +1,11 @@
-import { PropsWithChildren } from "react";
-import BodegaNavbar from "./ui/navbar";
+import { type PropsWithChildren } from 'react'
+import BodegaNavbar from './ui/navbar'
 
-const BodegaLayout = ({ children }: PropsWithChildren) => (
+const BodegaLayout = ({ children }: PropsWithChildren): JSX.Element => (
   <>
     <BodegaNavbar />
     {children}
   </>
 )
 
-export default BodegaLayout;
+export default BodegaLayout

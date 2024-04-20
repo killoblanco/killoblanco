@@ -1,11 +1,11 @@
-'use client';
+'use client'
 
-import { IconBackBtn } from "@/ui/components/back-btn";
-import { Button } from "@/ui/elements/button";
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/ui/elements/card";
-import Link from "next/link";
+import { IconBackBtn } from '@/ui/components/back-btn'
+import { Button } from '@/ui/elements/button'
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/ui/elements/card'
+import Link from 'next/link'
 
-const NewProductPage = () => {
+const NewProductPage = (): JSX.Element => {
   return (
     <>
       <div className="inline-flex gap-4 items-center">
@@ -96,4 +96,4 @@ const NewProductPage = () => {
   )
 }
 
-export default NewProductPage;
+export default NewProductPage

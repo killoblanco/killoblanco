@@ -1,15 +1,15 @@
-"use client"
+'use client'
 
-import * as AccordionPrimitive from "@radix-ui/react-accordion"
-import * as React from "react"
+import * as AccordionPrimitive from '@radix-ui/react-accordion'
+import * as React from 'react'
 
-import { cn } from "@/ui/utils"
+import { cn } from '@/ui/utils'
 
 const Accordion = AccordionPrimitive.Root
 
 const AccordionItem = React.forwardRef<
-  React.ElementRef<typeof AccordionPrimitive.Item>,
-  React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Item>
+React.ElementRef<typeof AccordionPrimitive.Item>,
+React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Item>
 >(({ className, ...props }, ref) => (
   <AccordionPrimitive.Item
     ref={ref}
@@ -17,18 +17,18 @@ const AccordionItem = React.forwardRef<
     {...props}
   />
 ))
-AccordionItem.displayName = "AccordionItem"
+AccordionItem.displayName = 'AccordionItem'
 
 const AccordionTrigger = React.forwardRef<
-  React.ElementRef<typeof AccordionPrimitive.Trigger>,
-  React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Trigger>
+React.ElementRef<typeof AccordionPrimitive.Trigger>,
+React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Trigger>
 >(({ className, children, ...props }, ref) => (
   <AccordionPrimitive.Header className="flex">
     <AccordionPrimitive.Trigger
       ref={ref}
       className={cn(
-        "border-b w-full",
-        "grid grid-cols-[auto_1fr] grid-flow-col gap-4 items-center justify-items-start",
+        'border-b w-full',
+        'grid grid-cols-[auto_1fr] grid-flow-col gap-4 items-center justify-items-start',
         "py-4 text-sm font-medium transition-all hover:underline [&[data-state=open]>[class*='icon-']]:rotate-180",
         className
       )}
@@ -42,18 +42,17 @@ const AccordionTrigger = React.forwardRef<
 AccordionTrigger.displayName = AccordionPrimitive.Trigger.displayName
 
 const AccordionContent = React.forwardRef<
-  React.ElementRef<typeof AccordionPrimitive.Content>,
-  React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Content>
+React.ElementRef<typeof AccordionPrimitive.Content>,
+React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Content>
 >(({ className, children, ...props }, ref) => (
   <AccordionPrimitive.Content
     ref={ref}
     className="overflow-hidden text-sm data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"
     {...props}
   >
-    <div className={cn("pb-4 pt-0", className)}>{children}</div>
+    <div className={cn('pb-4 pt-0', className)}>{children}</div>
   </AccordionPrimitive.Content>
 ))
 AccordionContent.displayName = AccordionPrimitive.Content.displayName
 
 export { Accordion, AccordionContent, AccordionItem, AccordionTrigger }
-

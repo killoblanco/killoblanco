@@ -1,8 +1,8 @@
-import { Button } from "@/ui/elements/button";
-import Link from "next/link";
-import PageFooter from "./(marketing)/ui/components/page-footer";
+import { Button } from '@/ui/elements/button'
+import Link from 'next/link'
+import PageFooter from './(marketing)/ui/components/page-footer'
 
-export default function Home() {
+export default function Home (): JSX.Element {
   return (
     <main className="container max-w-screen-xl">
       <section className="grid items-center justify-items-center min-h-dvh">
@@ -22,5 +22,5 @@ export default function Home() {
       </section>
       <PageFooter />
     </main>
-  );
+  )
 }

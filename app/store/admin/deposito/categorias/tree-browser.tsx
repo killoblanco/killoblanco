@@ -1,12 +1,12 @@
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/ui/elements/accordion"
-import { Badge } from "@/ui/elements/badge"
-import { Button, buttonVariants } from "@/ui/elements/button"
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/ui/elements/card"
-import { Input } from "@/ui/elements/input"
-import { Pagination, PaginationContent, PaginationEllipsis, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious } from "@/ui/elements/pagination"
-import { cn } from "@/ui/utils"
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/ui/elements/accordion'
+import { Badge } from '@/ui/elements/badge'
+import { buttonVariants } from '@/ui/elements/button'
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/ui/elements/card'
+import { Input } from '@/ui/elements/input'
+import { Pagination, PaginationContent, PaginationEllipsis, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious } from '@/ui/elements/pagination'
+import { cn } from '@/ui/utils'
 
-export const CategoriesTreeBrowser = () => {
+export const CategoriesTreeBrowser = (): JSX.Element => {
   return (
     <Card className="h-full">
       <CardHeader className="p-4">

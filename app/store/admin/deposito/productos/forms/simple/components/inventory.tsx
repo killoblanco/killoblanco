@@ -1,11 +1,11 @@
-import { Badge } from "@/ui/elements/badge";
-import { Input } from "@/ui/elements/input";
-import { Label } from "@/ui/elements/label";
-import { Switch } from "@/ui/elements/switch";
-import { Tooltip, TooltipContent, TooltipTrigger } from "@/ui/elements/tooltip";
-import { CollapsibleCard } from "@/ui/components/collapsible-card";
+import { CollapsibleCard } from '@/ui/components/collapsible-card'
+import { Badge } from '@/ui/elements/badge'
+import { Input } from '@/ui/elements/input'
+import { Label } from '@/ui/elements/label'
+import { Switch } from '@/ui/elements/switch'
+import { Tooltip, TooltipContent, TooltipTrigger } from '@/ui/elements/tooltip'
 
-export const SimpleProductInventoryInfoGroup = () => {
+export const SimpleProductInventoryInfoGroup = (): JSX.Element => {
   return (
     <CollapsibleCard
       title={(

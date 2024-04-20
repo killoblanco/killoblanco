@@ -1,14 +1,14 @@
-import { Badge } from "@/ui/elements/badge";
-import { Button } from "@/ui/elements/button";
-import { Input } from '@/ui/elements/input';
-import { Label } from '@/ui/elements/label';
-import { Separator } from "@/ui/elements/separator";
-import { Switch } from "@/ui/elements/switch";
-import { Textarea } from "@/ui/elements/textarea";
-import { Tooltip, TooltipContent, TooltipTrigger } from "@/ui/elements/tooltip";
-import { CollapsibleCard } from "@/ui/components/collapsible-card";
+import { CollapsibleCard } from '@/ui/components/collapsible-card'
+import { Badge } from '@/ui/elements/badge'
+import { Button } from '@/ui/elements/button'
+import { Input } from '@/ui/elements/input'
+import { Label } from '@/ui/elements/label'
+import { Separator } from '@/ui/elements/separator'
+import { Switch } from '@/ui/elements/switch'
+import { Textarea } from '@/ui/elements/textarea'
+import { Tooltip, TooltipContent, TooltipTrigger } from '@/ui/elements/tooltip'
 
-export const ProductGeneralInfoGroup = () => {
+export const ProductGeneralInfoGroup = (): JSX.Element => {
   return (
     <CollapsibleCard
       open={true}
@@ -94,5 +94,5 @@ export const ProductGeneralInfoGroup = () => {
         </Button>
       </div>
     </CollapsibleCard>
-  );
+  )
 }

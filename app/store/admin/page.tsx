@@ -1,9 +1,9 @@
-import { Button } from "@/ui/elements/button";
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/ui/elements/card";
-import { Progress } from "@/ui/elements/progress";
-import Link from "next/link";
+import { Button } from '@/ui/elements/button'
+import { Card, CardContent, CardFooter } from '@/ui/elements/card'
+import { Progress } from '@/ui/elements/progress'
+import Link from 'next/link'
 
-const AdminLandingPage = () => (
+const AdminLandingPage = (): JSX.Element => (
   <>
     <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight">
       Comencemos 🚀
@@ -36,4 +36,4 @@ const AdminLandingPage = () => (
   </>
 )
 
-export default AdminLandingPage;
+export default AdminLandingPage

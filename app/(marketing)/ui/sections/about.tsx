@@ -1,6 +1,6 @@
-import Thumbnail from "../components/thumbnail";
+import Thumbnail from '../components/thumbnail'
 
-const AboutInfo = () => (
+const AboutInfo = (): JSX.Element => (
   <section className="space-y-6" id="sobreMi">
     <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight inline-flex items-center">
       <span className="icon-[tabler--fingerprint-scan] size-9 mr-2" />
@@ -28,4 +28,4 @@ const AboutInfo = () => (
   </section>
 )
 
-export default AboutInfo;
+export default AboutInfo
