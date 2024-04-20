@@ -22,6 +22,9 @@ const nextConfig = {
         permanent: true,
       }
     ]
+  },
+  eslint: {
+    dirs: ['app', 'ui']
   }
 };
 
