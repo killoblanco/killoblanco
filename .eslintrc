@@ -21,6 +21,13 @@
   ],
   "rules": {
     "react/react-in-jsx-scope": "off",
-    "eol-last": "warn"
+    "react/jsx-indent": [
+      2,
+      2,
+      {
+        "checkAttributes": true,
+        "indentLogicalExpressions": true
+      }
+    ]
   }
 }

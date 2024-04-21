@@ -7,7 +7,7 @@ const BodegaLandingPage = (): null => {
   const router = useRouter()
 
   useEffect(() => {
-    router.replace('deposito/productos')
+    router.replace('bodega/productos')
   }, [router])
 
   return null

@@ -37,7 +37,7 @@ export const ProductGeneralInfoGroup = (): JSX.Element => {
       </div>
       <div className="grid w-full items-center gap-2">
         <Label>Descripción corta</Label>
-        <Textarea cols={5} />
+        <Textarea rows={5} />
         <p className="text-sm text-muted-foreground">
           0 / 280
         </p>

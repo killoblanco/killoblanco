@@ -7,10 +7,10 @@ const BodegaNavbar = (): JSX.Element => {
   const router = useRouter()
   const pathname = usePathname()
 
-  const [value] = pathname.replace('/store/admin/deposito', '').split('/').filter(Boolean)
+  const [value] = pathname.replace('/store/admin/bodega', '').split('/').filter(Boolean)
 
   const onChange = (value: string): void => {
-    router.push(`/store/admin/deposito/${value === 'productos' ? '' : value}`)
+    router.push(`/store/admin/bodega/${value === 'productos' ? '' : value}`)
   }
 
   return (

@@ -49,7 +49,7 @@ export const TextEditorField = (): JSX.Element => (
       <CardHeader className={cn(
         'group-focus-within:border-ring border-b border-input',
         'p-1.5 flex flex-row items-center gap-1',
-        'sticky top-[-1px] z-[2] bg-secondary'
+        'sticky top-[-1px] z-[2] bg-zinc-100'
       )}>
         <Toolbar />
       </CardHeader>

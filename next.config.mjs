@@ -24,7 +24,7 @@ const nextConfig = {
     ]
   },
   eslint: {
-    dirs: ['app', 'ui']
+    dirs: ['app', 'ui', 'ecommerce']
   }
 };
 

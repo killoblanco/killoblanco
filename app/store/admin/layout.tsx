@@ -1,7 +1,7 @@
 import PageFooter from '@/app/(marketing)/ui/components/page-footer'
 import { type Metadata } from 'next'
 import { type PropsWithChildren } from 'react'
-import AdminTopbar from './ui/topbar'
+import { AdminTopbar } from './ui/components/topbar'
 
 export const metadata: Metadata = {
   title: 'Tienda Admin',

@@ -1,0 +1,92 @@
+.root {
+    align-items: flex-start;
+    background-color: var(--sbt-color-background);
+    border: var(--sbt-input-border-size) solid var(--sbt-input-border-color);
+    border-radius: var(--sbt-input-border-radius);
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--sbt-spacing-20);
+    justify-content: flex-start;
+    margin-inline: auto;
+    max-height: calc(30 * 8px);
+    overflow: auto;
+    padding: var(--sbt-spacing-20) var(--sbt-spacing-30);
+    width: 100%;
+
+    &.error {
+        --sbt-input-box-shadow: 0 0 0 4px var(--sbt-red-10);
+        --sbt-input-hover-box-shadow: var(--sbt-input-box-shadow);
+
+        &:focus-within {
+            box-shadow: var(--sbt-input-box-shadow);
+            border-color: var(--sbt-red-70);
+        }
+
+        &:hover {
+            box-shadow: var(--sbt-input-hover-box-shadow);
+        }
+    }
+
+    &:focus-within {
+        box-shadow: var(--sbt-input-box-shadow);
+        border-color: var(--sb-input-focus-border-color);
+    }
+
+    &:hover {
+        box-shadow: var(--sbt-input-hover-box-shadow);
+    }
+
+    & [class*="sb-badge"] {
+        align-items: center;
+        display: flex;
+        gap: var(--sbt-spacing-10);
+
+        & [class*="sb-button_smaller"] {
+            --sb-button-icon-only-width: 18px;
+
+            & [class*="sb-button_icon"] {
+                font-size: 10px;
+            }
+        }
+    }
+
+    & input[type="email"] {
+        border: none;
+        font-size: var(--sb-typography-T20-font-size, var(--sbt-font-size-30));
+        font-weight: var(--sb-typography-T20-font-weight, var(--sbt-font-weight-40));
+        line-height: var(--sb-typography-T20-line-height, var(--sbt-line-height-50));
+        outline: none;
+        min-width: initial;
+        flex: 1 0 auto;
+
+        &.error {
+            animation-duration: 150ms;
+            animation-iteration-count: 3;
+            animation-direction: alternate;
+            animation-name: shake;
+            animation-timing-function: ease-in-out;
+        }
+
+        &:focus {
+            box-shadow: none;
+        }
+
+        &::placeholder {
+            color: var(--sbt-theme-tertiary-color-40);
+        }
+    }
+}
+
+@keyframes shake {
+    from {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(-5px);
+    }
+
+    to {
+        transform: translateX(5px);
+    }
+}
