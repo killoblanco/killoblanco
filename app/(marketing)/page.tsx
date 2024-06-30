@@ -5,6 +5,8 @@ import BentoShow from './ui/sections/bento'
 import Experience from './ui/sections/experience'
 import LandingHero from './ui/sections/landing-hero'
 
+export const runtime = 'edge'
+
 export default function Home (): JSX.Element {
   return (
     <>
