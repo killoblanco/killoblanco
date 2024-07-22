@@ -13,8 +13,7 @@
           transparent 35%, transparent 42%,
           var(--bg-color) 42%
       ),
-      url("https://static-cdn.jtvnw.net/jtv_user_pictures/65c8cf5f-f3e4-4297-b8f9-3b9cb6d9d994-profile_banner-480.png");
-      /* url('https://statics.globant.com/production/public/2022-04/Mask-Group-181.jpg'); */
+      url("/assets/globant_bg.png");
 }
 
 .disney {
@@ -32,5 +31,5 @@
           transparent 35%, transparent 42%,
           var(--bg-color) 42%
       ),
-      url('https://images.unsplash.com/photo-1605443790760-18c6121939d3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8ZGlzbmV5fHx8fHx8MTcxMDk1MzQwNQ&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080');
+      url('/assets/disney_bg.jpg');
 }

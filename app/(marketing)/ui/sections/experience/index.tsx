@@ -13,7 +13,7 @@ const Experience = (): JSX.Element => (
         from="Agosto 2018"
         position="Desarrollador Frontend"
         to="Actualidad"
-        thumbnail="https://media.licdn.com/dms/image/D560BAQHWB0kBTxn0kA/company-logo_200_200/0/1688411226388/globant_logo?e=1721260800&v=beta&t=_owkCp8S4QK_BU6K1KoKz1ThubeFIbVCFq8NDClriTo"
+        thumbnail="/assets/globant_logo.jpg"
         type="globant"
       />
       <ExperienceHighlight
@@ -21,7 +21,7 @@ const Experience = (): JSX.Element => (
         from="Julio 2022"
         position="Desarrollador Frontend"
         to="Actualidad"
-        thumbnail="https://media.licdn.com/dms/image/D4E0BAQF1XyWBdCLifg/company-logo_200_200/0/1712695413859/the_walt_disney_company_logo?e=1721260800&v=beta&t=LL1WOy_rrFeXQKJlPruBiWipCmiTTBs9S65Uo0x7PG0"
+        thumbnail="/assets/disney_logo.jpg"
         type="disney"
       />
     </div>

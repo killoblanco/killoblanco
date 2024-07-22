@@ -77,7 +77,7 @@ const ExperienceHistory = (): JSX.Element => {
           from="Abril 2022"
           position="Desarrollador Frontend"
           to="Junio 2022"
-          thumbnail="https://media.licdn.com/dms/image/D560BAQFAWSxvvOx1rA/company-logo_200_200/0/1656683780454/empowertoday_logo?e=1721260800&v=beta&t=PAA3MGSlcqyXYomqet5ktPvA9RuiADRRsgNUzVGjvpk"
+          thumbnail="/assets/empowertoday_logo.jpg"
           highlights={[
             'Brindé soporte a la plataforma y mejoré la accesibilidad del sitio web debido a nuevas leyes en EE. UU.'
           ]}
@@ -87,7 +87,7 @@ const ExperienceHistory = (): JSX.Element => {
           from="Agosto 2019"
           position="Desarrollador Frontend"
           to="Marzo 2022"
-          thumbnail="https://media.licdn.com/dms/image/C4D0BAQE5ahBMliaRVw/company-logo_200_200/0/1631339258852?e=1721260800&v=beta&t=3r1NxlHPXtUV4cwNY5fnjjQN9WaxKn4ClJFCpW0FGgc"
+          thumbnail="/assets/black_n_decker_logo.jpg"
           highlights={[
             'Colaboré en la creación de un sistema de administración de herramientas capaces de interactuar con la web mediante Bluetooth, incluyendo la ubicación geográfica de las herramientas registradas.',
             'Diseñé un sistema para gestionar promociones y/o eventos de la marca.'
@@ -98,7 +98,7 @@ const ExperienceHistory = (): JSX.Element => {
           from="Febrero 2019"
           position="Desarrollador Frontend"
           to="Agosto 2022"
-          thumbnail="https://media.licdn.com/dms/image/D560BAQHD7gFlBl8clA/company-logo_200_200/0/1688576070987/quantcast_logo?e=1721260800&v=beta&t=NTC5W5qR7pqxA90jC7_hI9ubptuexB5MGXcE2u_121s"
+          thumbnail="/assets/quantcast_logo.jpg"
           highlights={[
             'Contribuí al desarrollo de un script que carga el consentimiento de cookies, incluyendo su apariencia y personalización.'
           ]}
@@ -108,7 +108,7 @@ const ExperienceHistory = (): JSX.Element => {
           from="Agosto 2018"
           position="Desarrollador Frontend"
           to="Enero 2019"
-          thumbnail="https://media.licdn.com/dms/image/C510BAQFgUrtsFZfqdg/company-logo_200_200/0/1631371274248?e=1721260800&v=beta&t=qSTX2p4dwBuvEL2HeRgaNUOoVdY6K1q_f65ik7IXl7U"
+          thumbnail="/assets/davivienda_logo.jpg"
           highlights={[
             'Lideré el equipo de frontend en la creación de una PWA que agiliza el proceso de solicitud de créditos para pequeñas empresas, así como el seguimiento del flujo de caja de los negocios.'
           ]}
@@ -118,7 +118,7 @@ const ExperienceHistory = (): JSX.Element => {
           from="Agosto 2017"
           position="Desarrollador Fullstack"
           to="Julio 2018"
-          thumbnail="https://media.licdn.com/dms/image/D4D0BAQFy4CryLcesoQ/company-logo_200_200/0/1694135941161/agiledreamteam_logo?e=1721260800&v=beta&t=Ns_SPqEeDu0H9wAoymxNHQ_p9h5n4j6jjgnS3t35mZY"
+          thumbnail="/assets/agiledreamteam_logo.jpg"
           highlights={[
             'Participé en la creación de un sistema de gestión documental escrito en React.js con MongoDB.'
           ]}
@@ -128,7 +128,7 @@ const ExperienceHistory = (): JSX.Element => {
           from="Abril 2015"
           position="Desarrollador Backend"
           to="Mayo 2017"
-          thumbnail="https://media.licdn.com/dms/image/D4D0BAQGvrGpfVuD9pg/company-logo_200_200/0/1688740517713/optime_consulting_logo?e=1721260800&v=beta&t=iIOYShKMSzcswnYHop9mCGxsVF9U_T41L3LrB7UbRTM"
+          thumbnail="/assets/optime_consulting_logo.jpg"
           highlights={[
             'Optimicé un proceso de descarga de archivos que solía llevar alrededor de 45 minutos a tan solo 10 segundos utilizando un servicio dedicado escrito en Python.',
             'Colaboré en la implementación de SASS como compilador de CSS para las plataformas.',
@@ -140,7 +140,7 @@ const ExperienceHistory = (): JSX.Element => {
           from="Diciembre 2012"
           position="Desarrollador Fullstack"
           to="Marzo 2015"
-          thumbnail="https://media.licdn.com/dms/image/C4D0BAQFsRW6eGk8UlA/company-logo_200_200/0/1631348138117?e=1721260800&v=beta&t=g8qlVOyLijD8a8my3u2_EdhGuSZNCFLA6OiasRqZUIQ"
+          thumbnail="/assets/loma_logo.jpg"
           highlights={[
             'Contribuí a la creación y mantenimiento de una plataforma de gestion de metales preciosos.',
             'Implementé gráficos relacionados con el movimiento de acciones.',
