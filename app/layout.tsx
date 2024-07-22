@@ -18,6 +18,9 @@ export default function RootLayout ({
 }>): JSX.Element {
   return (
     <html lang="es-CO">
+      <head>
+        <link rel="preload" href="https://kamilo.dev/me.avif" as="image" />
+      </head>
       <body className={cn(
         'min-h-screen bg-background font-sans antialiased',
         fontSans.variable

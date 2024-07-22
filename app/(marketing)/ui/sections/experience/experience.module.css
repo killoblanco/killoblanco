@@ -13,7 +13,7 @@
           transparent 35%, transparent 42%,
           var(--bg-color) 42%
       ),
-      url("/assets/globant_bg.png");
+      url("/assets/globant_bg.avif");
 }
 
 .disney {
@@ -31,5 +31,5 @@
           transparent 35%, transparent 42%,
           var(--bg-color) 42%
       ),
-      url('/assets/disney_bg.jpg');
+      url('/assets/disney_bg.avif');
 }

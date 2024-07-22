@@ -13,7 +13,7 @@ const Experience = (): JSX.Element => (
         from="Agosto 2018"
         position="Desarrollador Frontend"
         to="Actualidad"
-        thumbnail="/assets/globant_logo.jpg"
+        thumbnail="/assets/globant_logo.avif"
         type="globant"
       />
       <ExperienceHighlight
@@ -21,7 +21,7 @@ const Experience = (): JSX.Element => (
         from="Julio 2022"
         position="Desarrollador Frontend"
         to="Actualidad"
-        thumbnail="/assets/disney_logo.jpg"
+        thumbnail="/assets/disney_logo.avif"
         type="disney"
       />
     </div>

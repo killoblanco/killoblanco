@@ -77,7 +77,7 @@ const ExperienceHistory = (): JSX.Element => {
           from="Abril 2022"
           position="Desarrollador Frontend"
           to="Junio 2022"
-          thumbnail="/assets/empowertoday_logo.jpg"
+          thumbnail="/assets/empowertoday_logo.avif"
           highlights={[
             'Brindé soporte a la plataforma y mejoré la accesibilidad del sitio web debido a nuevas leyes en EE. UU.'
           ]}
@@ -87,7 +87,7 @@ const ExperienceHistory = (): JSX.Element => {
           from="Agosto 2019"
           position="Desarrollador Frontend"
           to="Marzo 2022"
-          thumbnail="/assets/black_n_decker_logo.jpg"
+          thumbnail="/assets/black_n_decker_logo.avif"
           highlights={[
             'Colaboré en la creación de un sistema de administración de herramientas capaces de interactuar con la web mediante Bluetooth, incluyendo la ubicación geográfica de las herramientas registradas.',
             'Diseñé un sistema para gestionar promociones y/o eventos de la marca.'
@@ -98,7 +98,7 @@ const ExperienceHistory = (): JSX.Element => {
           from="Febrero 2019"
           position="Desarrollador Frontend"
           to="Agosto 2022"
-          thumbnail="/assets/quantcast_logo.jpg"
+          thumbnail="/assets/quantcast_logo.avif"
           highlights={[
             'Contribuí al desarrollo de un script que carga el consentimiento de cookies, incluyendo su apariencia y personalización.'
           ]}
@@ -108,7 +108,7 @@ const ExperienceHistory = (): JSX.Element => {
           from="Agosto 2018"
           position="Desarrollador Frontend"
           to="Enero 2019"
-          thumbnail="/assets/davivienda_logo.jpg"
+          thumbnail="/assets/davivienda_logo.avif"
           highlights={[
             'Lideré el equipo de frontend en la creación de una PWA que agiliza el proceso de solicitud de créditos para pequeñas empresas, así como el seguimiento del flujo de caja de los negocios.'
           ]}
@@ -118,7 +118,7 @@ const ExperienceHistory = (): JSX.Element => {
           from="Agosto 2017"
           position="Desarrollador Fullstack"
           to="Julio 2018"
-          thumbnail="/assets/agiledreamteam_logo.jpg"
+          thumbnail="/assets/agiledreamteam_logo.avif"
           highlights={[
             'Participé en la creación de un sistema de gestión documental escrito en React.js con MongoDB.'
           ]}
@@ -128,7 +128,7 @@ const ExperienceHistory = (): JSX.Element => {
           from="Abril 2015"
           position="Desarrollador Backend"
           to="Mayo 2017"
-          thumbnail="/assets/optime_consulting_logo.jpg"
+          thumbnail="/assets/optime_consulting_logo.avif"
           highlights={[
             'Optimicé un proceso de descarga de archivos que solía llevar alrededor de 45 minutos a tan solo 10 segundos utilizando un servicio dedicado escrito en Python.',
             'Colaboré en la implementación de SASS como compilador de CSS para las plataformas.',
@@ -140,7 +140,7 @@ const ExperienceHistory = (): JSX.Element => {
           from="Diciembre 2012"
           position="Desarrollador Fullstack"
           to="Marzo 2015"
-          thumbnail="/assets/loma_logo.jpg"
+          thumbnail="/assets/loma_logo.avif"
           highlights={[
             'Contribuí a la creación y mantenimiento de una plataforma de gestion de metales preciosos.',
             'Implementé gráficos relacionados con el movimiento de acciones.',
