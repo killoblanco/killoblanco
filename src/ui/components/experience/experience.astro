@@ -1,0 +1,32 @@
+---
+import Highlight from "./highlight.astro";
+import { ExpHistory } from "./history";
+---
+
+<section class="space-y-6" id="experiencia">
+  <h3
+    class="scroll-m-20 text-2xl font-semibold tracking-tight inline-flex items-center"
+  >
+    <span class="icon-[tabler--briefcase] size-9 mr-2"></span>
+    Experiencia
+  </h3>
+  <div class="grid md:grid-cols-2 gap-8">
+    <Highlight
+      companyName="Globant"
+      from="Agosto 2018"
+      position="Desarrollador Frontend"
+      to="Actualidad"
+      thumbnail="/assets/globant_logo.avif"
+      type="globant"
+    />
+    <Highlight
+      companyName="Disney"
+      from="Julio 2022"
+      position="Desarrollador Frontend"
+      to="Actualidad"
+      thumbnail="/assets/disney_logo.avif"
+      type="disney"
+    />
+  </div>
+  <ExpHistory client:idle />
+</section>

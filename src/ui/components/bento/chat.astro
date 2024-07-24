@@ -1,0 +1,32 @@
+---
+import { Card } from "@/ui/elements/card";
+---
+
+<Card
+  className="overflow-hidden relative p-0.5 border-none"
+>
+  <span
+    class="absolute inset-[-1000%] animate-[spin_5s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#fff_0%,#22d3ee_25%,#fff_50%,#22d3ee_75%,#fff_100%)] dark:bg-[conic-gradient(from_90deg_at_50%_50%,#09090b_0%,#0891b2_25%,#09090b_50%,#0891b2_75%,#09090b_100%)]"
+  ></span>
+  <a
+    href="//rag.kamilo.dev"
+    class="relative grid grid-cols-[1fr_auto] grid-flow-col gap-4 items-center h-full bg-background p-4 rounded-lg"
+  >
+    <h3
+      class="scroll-m-20 text-3xl md:text-4xl font-semibold tracking-tight col-span-2"
+    >
+      <span class="inline-flex gap-2 items-center">
+        <span class="size-8 icon-[fluent-emoji--magic-wand]" />
+        IA
+      </span>
+      <br />
+      <span
+        class="bg-gradient-to-r from-cyan-300 to-cyan-500 bg-clip-text text-transparent"
+      >
+        Chat Bot
+      </span>
+    </h3>
+    <span class="icon-[fluent-emoji--person-mage] size-24 justify-self-center"
+    ></span>
+  </a>
+</Card>
