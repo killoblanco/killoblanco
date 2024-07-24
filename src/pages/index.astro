@@ -1,0 +1,20 @@
+---
+import About from "@/ui/components/about.astro";
+import Bento from "@/ui/components/bento/bento.astro";
+import Experience from "@/ui/components/experience/experience.astro";
+import Footer from "@/ui/components/footer.astro";
+import Header from "@/ui/components/header.astro";
+import Hero from "@/ui/components/hero.astro";
+import BaseLayout from "@/ui/layouts/base.astro";
+---
+
+<BaseLayout>
+  <main class="container py-8 space-y-20" id="top">
+    <Header />
+    <Hero />
+    <Bento />
+    <Experience />
+    <About />
+    <Footer />
+  </main>
+</BaseLayout>

@@ -1,0 +1,32 @@
+---
+import { buttonVariants } from "../elements/button";
+import Thumbnail from "./thumbnail.astro";
+---
+
+<section class="grid md:grid-cols-2 gap-8 items-center justify-items-center">
+  <div class="space-y-4">
+    <h1 class="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
+      Kamilo Vasquez
+    </h1>
+    <p class="text-xl text-muted-foreground">
+      <span class="font-bold text-primary">
+        +{new Date().getFullYear() - 2010}
+      </span>
+      &nbsp;años de experiencia.&nbsp;
+      <span class="font-bold text-primary"> Ingeniero de software </span>
+      &nbsp;de Barranquilla, Colombia. Especializado en desarrollo de páginas y aplicaciones
+      web.
+    </p>
+    <div class="inline-flex gap-4">
+      <a href="https://github.com/killoblanco" class={buttonVariants()}>
+        <span class="icon-[tabler--brand-github] size-5 mr-2"></span>
+        Github
+      </a>
+      <a href="https://linkedin.com/in/killoblanco" class={buttonVariants()}>
+        <span class="icon-[tabler--brand-linkedin] size-5 mr-2"></span>
+        LinkedIn
+      </a>
+    </div>
+  </div>
+  <Thumbnail />
+</section>

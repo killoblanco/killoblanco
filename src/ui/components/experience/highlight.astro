@@ -1,0 +1,96 @@
+---
+import { Card, CardContent } from "@/ui/elements/card";
+import { cn } from "@/ui/utils";
+
+interface Props {
+  companyName: string;
+  from: string;
+  position: string;
+  to: string;
+  thumbnail: string;
+  type: "globant" | "disney";
+}
+
+const { companyName, from, position, to, thumbnail, type } = Astro.props;
+---
+
+<style>
+  .globant {
+    --bg-color: #eaf3a3; /* 200 */
+
+    background-image: radial-gradient(
+        circle at calc(11 * 8%) calc(2 * 8%),
+        transparent 0%,
+        transparent 10%,
+        var(--bg-color) 10%,
+        var(--bg-color) 11%,
+        transparent 11%,
+        transparent 15%,
+        var(--bg-color) 15%,
+        var(--bg-color) 19%,
+        transparent 19%,
+        transparent 32%,
+        var(--bg-color) 32%,
+        var(--bg-color) 35%,
+        transparent 35%,
+        transparent 42%,
+        var(--bg-color) 42%
+      ),
+      url("/assets/globant_bg.avif");
+  }
+
+  .disney {
+    --bg-color: #bde6fa; /* 200 */
+
+    background-image: radial-gradient(
+        circle at calc(11 * 8%) calc(2 * 8%),
+        transparent 0%,
+        transparent 10%,
+        var(--bg-color) 10%,
+        var(--bg-color) 11%,
+        transparent 11%,
+        transparent 15%,
+        var(--bg-color) 15%,
+        var(--bg-color) 19%,
+        transparent 19%,
+        transparent 32%,
+        var(--bg-color) 32%,
+        var(--bg-color) 35%,
+        transparent 35%,
+        transparent 42%,
+        var(--bg-color) 42%
+      ),
+      url("/assets/disney_bg.avif");
+  }
+</style>
+
+<Card
+  className={cn(
+    "bg-cover bg-center p-4 md:p-6",
+    type === "disney" &&
+      "bg-disney-200 border-disney-600 text-disney-950 disney",
+    type === "globant" &&
+      "bg-globant-200 border-globant-600 text-globant-950 globant",
+  )}
+>
+  <CardContent className="p-0 pt-4 flex flex-col items-start justify-end gap-2">
+    <img src={thumbnail} alt={companyName} class="size-16 rounded-lg" />
+    <h4
+      class={cn(
+        "scroll-m-20 text-2xl font-bold tracking-tight",
+        type === "disney" && "text-disney-600",
+        type === "globant" && "text-globant-600",
+      )}
+    >
+      {companyName}
+    </h4>
+    <p class="text-xl">{position}</p>
+    <div class="inline-flex items-center gap-2">
+      <span class="icon-[tabler--calendar] size-5"></span>
+      <p class="leading-7">
+        {`${to} - `}
+        <span class="text-sm leading-none">{from}</span>
+      </p>
+    </div>
+  </CardContent>
+</Card>
